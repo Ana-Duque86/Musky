@@ -8,7 +8,7 @@
     "typecheck": "npm run typecheck -w @musky/ui",
     "storybook": "storybook dev -p 6006 --ci -c apps/docs/.storybook",
     "build:docs": "storybook build -c apps/docs/.storybook -o apps/docs/storybook-static",
-    "deploy:storybook": "npm run build:docs && vercel deploy apps/docs/storybook-static --yes --scope ana-duques-projects",
+    "deploy:storybook": "npm run build:docs && vercel deploy apps/docs/storybook-static --yes",
     "ai:index": "python3 tools/skills/codebase-index/scripts/index_codebase.py . --format toon",
     "ds:health": "node tools/ds-health/index.mjs",
     "repo:github": "bash scripts/bootstrap-github-remote.sh"
