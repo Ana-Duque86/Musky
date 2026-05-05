@@ -38,7 +38,7 @@ Metadata must explicitly record when an internal element uses absolute positioni
 ## Git y Storybook en Vercel
 
 - **Qué va en Git:** código fuente, `package-lock.json`, Storybook en `apps/docs/.storybook`, `vercel.json`, `.vercel/project.json` (enlace al proyecto), workflow en `.github/workflows/`. **No** subir `apps/docs/storybook-static/` (se genera con `npm run build:docs`).
-- **CI:** el workflow `Deploy Storybook` necesita en GitHub **Secrets** `VERCEL_TOKEN` y `VERCEL_ORG_ID` (`team_…` desde Team Settings). Opción alternativa: en [Vercel](https://vercel.com) → proyecto **musky_storybook** → **Connect Git** y dejar que Vercel construya con los mismos comandos que `vercel.json`.
+- **CI:** el workflow `Deploy Storybook` necesita en GitHub **Secrets** `VERCEL_TOKEN` y `VERCEL_ORG_ID` (`team_…` desde Team Settings). Opción alternativa: en [Vercel](https://vercel.com) → proyecto **musky_storybook** → **Connect Git** y dejar que Vercel construya con los mismos comandos que `vercel.json`. **No actives los dos a la vez** (evitas dos despliegues por push): o solo Actions, o solo Connect Git (y entonces desactiva o borra el workflow).
 - **Manual:** `npm run deploy:storybook` (requiere `vercel login`).
 
 ## Skills
