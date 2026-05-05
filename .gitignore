@@ -1,0 +1,23 @@
+node_modules/
+apps/docs/storybook-static/
+.DS_Store
+
+# Logs y entorno local
+*.log
+npm-debug.log*
+.env
+.env.*
+!.env.example
+
+# Cachés de tooling
+.turbo
+.cache
+node_modules/.cache/
+
+# Artefactos de build sueltos
+dist/
+coverage/
+*.tsbuildinfo
+
+# Salida de Vercel local (el enlace .vercel/project.json sí se versiona)
+.vercel/output

@@ -1,0 +1,58 @@
+@import "../../styles/tokens.css";
+
+.musky-segmented-control {
+  background: var(--component-segmented-control-bg);
+  border: 1px solid var(--component-segmented-control-border);
+  border-radius: var(--component-segmented-control-radius);
+  box-sizing: border-box;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 0;
+}
+
+.musky-segmented-control__option {
+  align-items: center;
+  background: var(--component-segmented-control-option-bg);
+  border: 0;
+  border-radius: var(--component-segmented-control-radius);
+  color: var(--component-segmented-control-option-text);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 0;
+  font-family: var(--typography-label-font-family);
+  font-size: var(--typography-label-font-size);
+  font-weight: var(--typography-label-font-weight);
+  gap: var(--space-2);
+  height: var(--component-segmented-control-option-height);
+  justify-content: center;
+  letter-spacing: var(--typography-label-letter-spacing);
+  line-height: var(--typography-label-line-height);
+  min-width: 160px;
+  padding: 0 var(--component-segmented-control-option-padding-x);
+}
+
+.musky-segmented-control__option[data-active="true"] {
+  background: var(--component-segmented-control-option-active-bg);
+  color: var(--component-segmented-control-option-active-text);
+}
+
+.musky-segmented-control__option:disabled {
+  color: var(--component-button-disabled-text);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.musky-segmented-control__option:focus-visible {
+  outline: var(--semantic-focus-ring-width) solid var(--component-segmented-control-focus-ring);
+  outline-offset: var(--component-segmented-control-focus-ring-offset);
+}
+
+.musky-segmented-control__icon {
+  align-items: center;
+  background: var(--semantic-background-surface-alt);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}

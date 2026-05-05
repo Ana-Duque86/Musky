@@ -1,0 +1,139 @@
+@import "../../styles/tokens.css";
+
+/* Home layout vs Figma: main.musky-home (149:2887), icon tint ref (149:3837). */
+
+.musky-home {
+  background: var(--background-app);
+  box-sizing: border-box;
+  color: var(--text-primary);
+  font-family: var(--typography-body-font-family);
+  min-height: 100vh;
+  max-width: 390px;
+  min-width: 0;
+  overflow-x: visible;
+  width: 100%;
+}
+
+.musky-home__content {
+  --component-double-reward-card-amount-empty-font-size: 36px;
+  --component-double-reward-card-amount-empty-line-height: 44px;
+  --component-double-reward-card-promo-title-font-size: 18px;
+  --component-double-reward-card-promo-title-line-height: 22px;
+  --component-double-reward-card-referral-code-line-height: 16px;
+  --component-chip-base-font-size: 10px;
+  --component-chip-base-line-height: 12px;
+  --typography-body-font-size: 14px;
+  --typography-body-line-height: 18px;
+  --typography-body-small-font-size: 12px;
+  --typography-body-small-line-height: 18px;
+  --typography-caption-font-size: 10px;
+  --typography-caption-line-height: 12px;
+  --typography-display-font-size: 38px;
+  --typography-display-line-height: 46px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  overflow-x: visible;
+  padding: var(--space-2) var(--layout-screen-padding-x);
+}
+
+.musky-home__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.musky-home .musky-header {
+  padding-left: var(--layout-screen-padding-x);
+  padding-right: var(--layout-screen-padding-x);
+}
+
+.musky-home .musky-banner__title {
+  font-size: var(--typography-body-font-size);
+  line-height: var(--typography-body-line-height);
+}
+
+.musky-home__section-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.musky-home__section-title {
+  color: var(--semantic-text-primary);
+  font-size: 18px;
+  font-weight: var(--typography-font-weight-semibold);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: 18px;
+  margin: 0;
+}
+
+.musky-home__section-title-prefix {
+  font-weight: var(--typography-font-weight-regular);
+}
+
+.musky-home__section-action {
+  flex: 0 0 auto;
+}
+
+.musky-home .musky-home__section-action.musky-button--secondary {
+  --typography-label-small-font-size: 12px;
+  --typography-label-small-line-height: 16px;
+
+  background: var(--semantic-background-surface);
+  border: 2px solid var(--color-brand-pink);
+  border-radius: var(--radius-full);
+  color: var(--semantic-text-primary);
+  font-weight: var(--typography-font-weight-medium);
+  height: 40px;
+  min-height: 40px;
+  padding-block: 2px;
+  padding-inline: 18px;
+}
+
+.musky-home .musky-card-carousel__header-action.musky-button--secondary {
+  --typography-label-small-font-size: 14px;
+  --typography-label-small-line-height: 18px;
+
+  background: var(--semantic-background-surface);
+  border: 2px solid var(--color-brand-pink);
+  border-radius: var(--radius-full);
+  color: var(--semantic-text-primary);
+  font-weight: var(--typography-font-weight-medium);
+  height: 40px;
+  min-height: 40px;
+  padding-block: 2px;
+  padding-inline: 18px;
+}
+
+.musky-home .musky-card-carousel {
+  gap: var(--space-4);
+}
+
+/* Carrusel de promos: mismo ritmo tipográfico que "Tus reembolsos". */
+.musky-home .musky-card-carousel__title {
+  font-family: var(--typography-body-font-family);
+  font-size: 18px;
+  font-weight: var(--typography-font-weight-semibold);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: 18px;
+}
+
+.musky-home .musky-card-carousel__title .musky-home__section-title-prefix {
+  font-weight: var(--typography-font-weight-regular);
+}
+
+.musky-home .musky-content-module__title {
+  font-family: var(--typography-body-font-family);
+  font-size: 18px;
+  font-weight: var(--typography-font-weight-semibold);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: 18px;
+  margin: 0;
+  min-width: 0;
+}
+
+.musky-home .musky-content-module__title .musky-home__section-title-prefix {
+  font-weight: var(--typography-font-weight-regular);
+}

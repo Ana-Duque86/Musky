@@ -1,0 +1,20 @@
+generated: "2026-05-03T01:01:47.829242+00:00"
+npmPackages:
+  "@vitejs/plugin-react":
+    version: latest
+    usedIn[1]: framework
+    purpose: "Package: @vitejs/plugin-react"
+  react:
+    version: latest
+    usedIn[1]: framework
+    purpose: React library
+  "react-dom":
+    version: latest
+    usedIn[1]: framework
+    purpose: "Package: react-dom"
+  "@storybook/react-vite":
+    version: latest
+    usedIn[1]: framework
+    purpose: "Package: @storybook/react-vite"
+utilities:
+styles:

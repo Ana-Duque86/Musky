@@ -1,0 +1,129 @@
+@import "./tokens.css";
+
+.musky-text {
+  color: var(--semantic-text-primary);
+  font-family: var(--typography-body-font-family);
+  margin: 0;
+}
+
+.musky-text--display {
+  font-family: var(--typography-display-font-family);
+  font-size: var(--typography-display-font-size);
+  font-weight: var(--typography-display-font-weight);
+  letter-spacing: var(--typography-display-letter-spacing);
+  line-height: var(--typography-display-line-height);
+}
+
+.musky-text--h1 {
+  font-family: var(--typography-h1-font-family);
+  font-size: var(--typography-h1-font-size);
+  font-weight: var(--typography-h1-font-weight);
+  letter-spacing: var(--typography-h1-letter-spacing);
+  line-height: var(--typography-h1-line-height);
+}
+
+.musky-text--h2 {
+  font-family: var(--typography-h2-font-family);
+  font-size: var(--typography-h2-font-size);
+  font-weight: var(--typography-h2-font-weight);
+  letter-spacing: var(--typography-h2-letter-spacing);
+  line-height: var(--typography-h2-line-height);
+}
+
+.musky-text--h3 {
+  font-family: var(--typography-h3-font-family);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-h3-font-weight);
+  letter-spacing: var(--typography-h3-letter-spacing);
+  line-height: var(--typography-h3-line-height);
+}
+
+.musky-text--body-large {
+  font-family: var(--typography-body-large-font-family);
+  font-size: var(--typography-body-large-font-size);
+  font-weight: var(--typography-body-large-font-weight);
+  letter-spacing: var(--typography-body-large-letter-spacing);
+  line-height: var(--typography-body-large-line-height);
+}
+
+.musky-text--body {
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-body-font-weight);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: var(--typography-body-line-height);
+}
+
+.musky-text--body-small {
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  letter-spacing: var(--typography-body-small-letter-spacing);
+  line-height: var(--typography-body-small-line-height);
+}
+
+.musky-text--label {
+  font-family: var(--typography-label-font-family);
+  font-size: var(--typography-label-font-size);
+  font-weight: var(--typography-label-font-weight);
+  letter-spacing: var(--typography-label-letter-spacing);
+  line-height: var(--typography-label-line-height);
+}
+
+.musky-text--label-small {
+  font-family: var(--typography-label-small-font-family);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-label-small-font-weight);
+  letter-spacing: var(--typography-label-small-letter-spacing);
+  line-height: var(--typography-label-small-line-height);
+}
+
+.musky-text--caption {
+  font-family: var(--typography-caption-font-family);
+  font-size: var(--typography-caption-font-size);
+  font-weight: var(--typography-caption-font-weight);
+  letter-spacing: var(--typography-caption-letter-spacing);
+  line-height: var(--typography-caption-line-height);
+}
+
+.musky-text--overline {
+  font-family: var(--typography-overline-font-family);
+  font-size: var(--typography-overline-font-size);
+  font-weight: var(--typography-overline-font-weight);
+  letter-spacing: var(--typography-overline-letter-spacing);
+  line-height: var(--typography-overline-line-height);
+  text-transform: uppercase;
+}
+
+.musky-text--link {
+  color: var(--semantic-action-link-text);
+  font-family: var(--typography-link-font-family);
+  font-size: var(--typography-link-font-size);
+  font-weight: var(--typography-link-font-weight);
+  letter-spacing: var(--typography-link-letter-spacing);
+  line-height: var(--typography-link-line-height);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.musky-text--secondary {
+  color: var(--semantic-text-secondary);
+}
+
+.musky-text--disabled {
+  color: var(--semantic-text-disabled);
+}
+
+.musky-text--inverse {
+  color: var(--semantic-text-inverse);
+}
+
+.musky-text--highlight {
+  color: var(--semantic-text-highlight);
+}
+
+.musky-text--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

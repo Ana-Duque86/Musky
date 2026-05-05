@@ -1,0 +1,18 @@
+{
+  "default": {
+    "user_name": "Eduardo",
+    "user_avatar": null,
+    "notifications_count": 2,
+    "notifications_type": ["vaccines", "appointments"],
+    "rewards_status": "highlight",
+    "rewards_points": 1200
+  },
+  "fallback": {
+    "user_name": null,
+    "user_avatar": null,
+    "notifications_count": 0,
+    "notifications_type": [],
+    "rewards_status": "inactive",
+    "rewards_points": 0
+  }
+}

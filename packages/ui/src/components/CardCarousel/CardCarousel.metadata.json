@@ -1,0 +1,106 @@
+{
+  "component": {
+    "name": "CardCarousel",
+    "category": "content",
+    "description": "Horizontal exploratory container for homogeneous Card items. Promo carousels support upsell/cross-sell, optional header, snap/free scroll, peek, and a header action when more than two items need a broader view.",
+    "type": "carousel"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Card Carousel",
+    "componentSet": "Card Carousel"
+  },
+  "usage": {
+    "useCases": ["promotions", "recommendations", "rewards", "features"],
+    "antiPatterns": [
+      {
+        "scenario": "Urgent or required tasks",
+        "reason": "Horizontal scrolling hides priority and weakens conversion.",
+        "alternative": "ActionList"
+      },
+      {
+        "scenario": "One item",
+        "reason": "Carousel chrome adds unnecessary interaction.",
+        "alternative": "Standalone Card"
+      },
+      {
+        "scenario": "Mixed priorities",
+        "reason": "Carousel is exploratory and should stay homogeneous.",
+        "alternative": "Sectioned lists"
+      }
+    ],
+    "contentRules": [
+      "Cards in the same carousel should be homogeneous.",
+      "Use for discovery, promos, rewards, or features, not critical actions.",
+      "Hide component when items is empty.",
+      "Render a standalone Card when there is exactly one item.",
+      "Show a header button when there are more than two items and a wider destination exists.",
+      "For promo carousels, show type labels when selected_content_type is all; hide the type label when a specific content-type filter is selected.",
+      "Promo Tractive logic: if has_tractive is false, show upsell; if has_tractive is true, show insights instead.",
+      "Personalized promo content must consider pet_name, benefit_eligibility, campaign_id, selected_content_type, and visibility."
+    ],
+    "requiredProps": ["items"]
+  },
+  "composition": {
+    "nestedComponents": ["Card", "Button", "ActionList", "ContentModule"],
+    "rules": [
+      "CardCarousel contains Card items; never recreate card internals inside carousel.",
+      "The optional header action uses Button secondary small.",
+      "Show the small secondary Button when there are more than two card actions/items and a wider destination exists.",
+      "CardCarousel forces equal row height for all Card instances in the track; Card body expands so metadata/actions align to the bottom.",
+      "When a slide needs a task list, pass ActionList as Card `children` inside that item's CardProps; keep other slides visually consistent (promo vs task mix is acceptable for discovery rails).",
+      "ContentModule composes CardCarousel for the horizontal track after optional title and filter chips.",
+      "Header (title, optional description, optional action) stays within the parent horizontal padding; the scroll track extends past the trailing padding by layout/screen/paddingX plus layout/carousel/peekOutset so the first slide lines up with the same inset as siblings while the next slide visibly peeks on the right."
+    ]
+  },
+  "variants": {
+    "scrollType": ["snap", "free"],
+    "cardSize": ["sm", "md", "lg"],
+    "peek": [true, false],
+    "hasHeader": [true, false],
+    "state": ["default", "scroll", "empty"]
+  },
+  "layout": {
+    "zones": ["top-header", "middle-horizontal-cards", "bottom-indicator-optional"],
+    "behavior": "Horizontal overflow with optional scroll snap; cards remain independent focus targets."
+  },
+  "tokens": [
+    "layout/screen/paddingX",
+    "layout/carousel/slideWidth/sm",
+    "layout/carousel/slideWidth/md",
+    "layout/carousel/slideWidth/lg",
+    "layout/carousel/peekOutset",
+    "layout/container/insetDense",
+    "space/2",
+    "semantic/text/primary",
+    "semantic/text/secondary",
+    "typography/h3",
+    "typography/bodySmall"
+  ],
+  "accessibility": {
+    "role": "region with horizontally scrollable card list",
+    "keyboardSupport": "Each card remains reachable by tab. Native horizontal scroll remains available.",
+    "screenReader": "Reading order follows the Figma documentation annotations: header names the region when present, optional header action, horizontal track, then each Card with its own accessible name.",
+    "focusManagement": "The optional header button is an independent focus before the cards. Each Card remains a separate focus target; the carousel track itself should not hide critical actions.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "items",
+      "item_type",
+      "collection_id",
+      "list_order",
+      "visibility",
+      "selected_content_type",
+      "has_tractive",
+      "benefit_eligibility",
+      "pet_name",
+      "campaign_id"
+    ]
+  },
+  "aiHints": {
+    "priority": "medium",
+    "keywords": ["carousel", "horizontal cards", "promos", "recommendations"],
+    "context": "Carousel is exploration. If priority is high or required, use ActionList instead."
+  }
+}

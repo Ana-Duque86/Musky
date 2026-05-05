@@ -1,0 +1,104 @@
+{
+  "component": {
+    "name": "Icon",
+    "category": "foundations",
+    "description": "Reusable action icon component used as a swappable leading icon inside Action List Item. Icons are graphical component variants, not text glyphs.",
+    "type": "visual"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Icons",
+    "referenceNode": "141:896",
+    "componentSet": "Icon / Action"
+  },
+  "usage": {
+    "useCases": [
+      "action-list-leading-icon",
+      "task-type-visual-context",
+      "status-adjacent-visual-cue",
+      "card-icon-visual"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "Replacing the row title with an icon-only label",
+        "reason": "The Action List row must remain understandable from text.",
+        "alternative": "Use icon as decorative/supporting context and keep action_title visible."
+      }
+    ],
+    "contentRules": [
+      "Glifos duotono desde Figma (pagina Icons, node 141:896); viewBox 38×38; colores via semantic/icon/duo/a|b|badge.",
+      "Mapeo API name → Figma: microchip; medicalDocument (59:1493); injection (59:1513); care (59:1519); notifications (141:962); notificationsBadge (141:963); present (141:964).",
+      "Use icons to reinforce the action type, not to encode priority alone.",
+      "Priority remains communicated by Chip / Priority text.",
+      "Icons use semantic/icon/duo/* tokens via CSS classes; prop `tone` adjusts duo variables.",
+      "Use `size` sm | md | lg for 24, 38, 48 px (layout/icon/size/*)."
+    ],
+    "requiredProps": ["name"]
+  },
+  "variants": {
+    "icon": [
+      "microchip",
+      "medicalDocument",
+      "injection",
+      "care",
+      "notifications",
+      "notificationsBadge",
+      "present"
+    ],
+    "size": ["sm", "md", "lg"],
+    "tone": [
+      "primary",
+      "secondary",
+      "muted",
+      "inverse",
+      "brand",
+      "brandPink",
+      "accent",
+      "success",
+      "warning",
+      "danger",
+      "info",
+      "promo"
+    ]
+  },
+  "tokens": [
+    "semantic/icon/primary",
+    "semantic/icon/secondary",
+    "semantic/icon/muted",
+    "semantic/icon/inverse",
+    "semantic/icon/brand",
+    "semantic/icon/duo/a",
+    "semantic/icon/duo/b",
+    "semantic/icon/duo/badge",
+    "semantic/status/success/icon",
+    "semantic/status/warning/icon",
+    "semantic/status/danger/icon",
+    "semantic/status/info/icon",
+    "semantic/status/promo/icon",
+    "layout/icon/size/sm",
+    "layout/icon/size/md",
+    "layout/icon/size/lg"
+  ],
+  "composition": {
+    "nestedComponents": [],
+    "rules": [
+      "Icon / Action variants are composed as instances inside Action List Item leading slot.",
+      "Do not use raw text glyphs for the leading icon in Action List Item.",
+      "Default size `md` (38px) for Card icon wells; Action List uses **sm** (24px) + **secondary** tone for leading icons by default (override per row with `iconSize` / `iconTone`); use `lg` (48px) when the container is 48px."
+    ]
+  },
+  "accessibility": {
+    "role": "presentation unless the icon adds non-repeated information",
+    "keyboardSupport": "Not interactive; parent row handles focus.",
+    "screenReader": "Do not announce decorative icons; row title and chip carry the accessible name.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": ["action_icon", "action_type", "task_priority", "action_icon_size", "action_list_default_icon_size", "action_icon_tone"]
+  },
+  "aiHints": {
+    "priority": "medium",
+    "keywords": ["icon", "leading", "action list", "microchip", "medicalDocument", "notifications", "24", "38", "48"],
+    "context": "Use Icon / Action for Action List leading visuals. Swap the component variant rather than drawing or typing an icon locally."
+  }
+}

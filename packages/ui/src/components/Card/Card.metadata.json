@@ -1,0 +1,131 @@
+{
+  "component": {
+    "name": "Card",
+    "category": "content",
+    "description": "Base container for decision-oriented content. Groups title, optional visual, chip, description, metadata, and CTA into one scannable unit.",
+    "type": "card"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Card",
+    "componentSet": "Card"
+  },
+  "usage": {
+    "useCases": ["content-item", "pet-action", "reward-item", "promo-entry"],
+    "antiPatterns": [
+      {
+        "scenario": "Single isolated action",
+        "reason": "A button communicates action with less visual weight.",
+        "alternative": "Button"
+      },
+      {
+        "scenario": "Critical prioritized list",
+        "reason": "Cards reduce scan speed for urgent tasks.",
+        "alternative": "ActionList"
+      },
+      {
+        "scenario": "Global feedback message",
+        "reason": "Cards are item containers, not system messages.",
+        "alternative": "Banner"
+      }
+    ],
+    "contentRules": [
+      "Title is the main decision cue and should fit in one or two lines.",
+      "Subtitle explains context or consequence, max two lines.",
+      "Metadata is secondary: date, status, or progress summary.",
+      "Chip is optional and translates priority into human language.",
+      "Navigation card must not use internal **buttons**; use the whole card as the single action.",
+      "When `href` is set with `ctaType=link` and the same destination, the card renders as one `<a>` and the link label is decorative (no nested interactive control).",
+      "Use internal CTAs only when there are two distinct actions; render primary + secondary Button (sm).",
+      "Internal link CTA is optional for secondary emphasis when the card is not the sole navigation target."
+    ],
+    "requiredProps": ["title"]
+  },
+  "composition": {
+    "nestedComponents": ["Button", "Chip", "Icon"],
+    "rules": [
+      "DS Health: no aparece en la tabla de paridad `component/…` porque los estilos usan solo tokens globales (semantic, typography, space, radius, etc.).",
+      "Reuse Chip / Priority for status or priority; do not draw chip geometry locally.",
+      "Reuse Button (primary + secondary, sm) when ctaType=buttons.",
+      "Use Icon / Action for icon visuals.",
+      "Image visual is full-bleed on vertical **default** cards: it reaches the card edges and only the content body keeps inner padding; `surface=editorial` keeps padding 0 on the root, uses normal image insets, and rounds the image on all four corners with no card border or fill.",
+      "Optional `contentCategoryLabel` renders an editorial overline (not Chip / Priority); tone maps to semantic status colors for discovery modules.",
+      "CardCarousel composes Card instances; Card remains usable standalone.",
+      "Optional `children` render below metadata/CTA inside the body grid (e.g. embed an ActionList for a task summary card)."
+    ]
+  },
+  "variants": {
+    "type": ["navigation", "action", "info"],
+    "visualType": ["image", "icon", "none"],
+    "hasChip": [true, false],
+    "hasContentCategory": [true, false],
+    "hasCTA": [true, false],
+    "ctaType": ["none", "link", "buttons"],
+    "orientation": ["vertical", "horizontal"],
+    "density": ["compact", "default"],
+    "elevation": ["none", "low", "high"],
+    "surface": ["default", "editorial"],
+    "state": ["default", "disabled", "loading"]
+  },
+  "layout": {
+    "zones": ["top-visual-or-chip", "middle-title-description", "bottom-metadata-cta"],
+    "behavior": "Whole card is the hit target for navigation only when there is no internal CTA. Pair of buttons implies two actions and disables whole-card navigation."
+  },
+  "tokens": [
+    "semantic/background/surface",
+    "semantic/background/surfaceAlt",
+    "semantic/border/subtle",
+    "semantic/text/primary",
+    "semantic/text/secondary",
+    "semantic/action/linkText",
+    "semantic/icon/primary",
+    "semantic/focus/ring",
+    "semantic/elevation/low",
+    "semantic/elevation/high",
+    "semantic/state/disabledOpacity",
+    "semantic/state/loadingOpacity",
+    "space/2",
+    "space/1",
+    "space/3",
+    "space/4",
+    "radius/md",
+    "typography/body",
+    "typography/bodySmall",
+    "typography/caption",
+    "typography/link",
+    "typography/overline",
+    "semantic/status/infoText",
+    "semantic/status/successText",
+    "semantic/status/warningText"
+  ],
+  "accessibility": {
+    "role": "article, link, or button depending on interaction",
+    "keyboardSupport": "Clickable card receives one focus target; internal CTA receives independent focus when it is a real button (not when the whole card is already an anchor with a decorative link label).",
+    "screenReader": "Reading order follows the Figma documentation annotations: optional visual/chip context, title as accessible name, subtitle, metadata, and CTA if present. Whole-card links with decorative CTA text use `aria-label` on the anchor combining title and CTA.",
+    "focusManagement": "Navigation card without internal CTA has one focus target. Two buttons receive separate tab stops; the card surface does not. Internal link CTA is a separate button unless merged into a single anchor with decorative link text.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "item_id",
+      "item_type",
+      "title",
+      "description",
+      "priority",
+      "image_url",
+      "content_id",
+      "content_category",
+      "content_url",
+      "action_type",
+      "action_target",
+      "is_clickable",
+      "list_order",
+      "visibility"
+    ]
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["card", "content item", "decision unit", "entity"],
+    "context": "Use Card when the user must understand or choose one item. Use CardCarousel only for exploratory groups."
+  }
+}

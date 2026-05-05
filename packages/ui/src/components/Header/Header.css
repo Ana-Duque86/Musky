@@ -1,0 +1,54 @@
+@import "../../styles/tokens.css";
+
+.musky-header {
+  align-items: center;
+  background: var(--semantic-background-app);
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--space-3);
+  height: 59px;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-4);
+  width: 100%;
+}
+
+.musky-header__identity,
+.musky-header__actions {
+  align-items: center;
+  display: flex;
+}
+
+.musky-header__identity {
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.musky-header__actions {
+  flex-shrink: 0;
+  gap: var(--space-2);
+}
+
+/** Punto de no leídas: rojo acento (no vinotinto / `danger-progress`). */
+.musky-header__notification-slot .musky-icon-button__badge {
+  background: var(--color-danger-notification-dot);
+  border-color: var(--semantic-background-app);
+}
+
+.musky-header__greeting {
+  color: var(--semantic-text-primary);
+  font-family: var(--typography-label-font-family);
+  font-size: var(--typography-label-font-size);
+  letter-spacing: var(--typography-label-letter-spacing);
+  line-height: var(--typography-label-line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.musky-header__greeting-regular {
+  font-weight: var(--typography-font-weight-regular);
+}
+
+.musky-header__greeting-name {
+  font-weight: var(--typography-font-weight-bold);
+}

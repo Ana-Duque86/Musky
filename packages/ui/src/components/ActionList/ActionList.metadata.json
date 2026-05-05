@@ -1,0 +1,192 @@
+{
+  "component": {
+    "name": "ActionList",
+    "category": "navigation",
+    "description": "Prioritized list of actionable rows with optional chips, reimbursement progress bars, metadata, and chevron affordance. Uses semantic tokens only for surfaces, text, borders, status chips, and progress indicators so the pattern stays product-agnostic.",
+    "type": "list"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Action List",
+    "referenceNode": "134:1291",
+    "componentSet": "Action List Card"
+  },
+  "usage": {
+    "useCases": [
+      "pending-tasks-home",
+      "account-health-checklist",
+      "onboarding-blockers",
+      "multi-step-policy-actions"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "Single primary action on the screen",
+        "reason": "A full list adds scanning cost.",
+        "alternative": "Primary Button or Card"
+      },
+      {
+        "scenario": "Purely informational static content",
+        "reason": "List implies navigation or task resolution.",
+        "alternative": "Banner or Article card"
+      }
+    ],
+    "contentRules": [
+      "Title is a concise action; prefer a short line, allow wrapping to a second line when space is tight — do not truncate with ellipsis in UI.",
+      "Subtitle explains consequence or context in max two lines.",
+      "Use chips for task priority, not full-row background color.",
+      "Use progress bars instead of chips when a reimbursement status is present.",
+      "For reimbursement progress rows, title states the primary status (e.g. blocked), subtitle explains why or the next step, and metadata shows only the reimbursement request creation date.",
+      "Reimbursement rows use spacing/2 between text blocks; row padding uses layout/container/insetDense (10px) on all sides; progress bars keep a 2px bottom margin before the row edge.",
+      "Leading icons use **sm** (24px, `layout/icon/size/sm`) and **secondary** duotone by default; the list may set `defaultIconSize` / `defaultIconTone` (Home uses **brandPink** per Figma), and rows may still override `iconSize` / `iconTone`.",
+      "Dynamic summary banner copy follows highest_priority across items."
+    ],
+    "requiredProps": ["action_title", "task_priority"]
+  },
+  "composition": {
+    "nestedComponents": ["Chip", "Icon", "Typography"],
+    "rules": [
+      "ActionList composes as **Action List Card**: a rounded card container with surface, border, and radius bound to semantic/base variables; internal card padding is 0 so rows use the full available width.",
+      "Action List Item variants live inside the card container; do not render production examples as floating rows.",
+      "Chip is the standalone component **Chip / Priority** — place it in the **title row** next to the title for standard rows; hide it when reimbursement progress is shown.",
+      "Reimbursement rows hide Chip and render four progress segments using state tokens: blocked uses semantic/status/danger/progress, reviewing uses info onSurface, processing payment uses info onSurface, and paid uses success onSurface.",
+      "Row surface uses semantic/background/surface; horizontal gaps between leading, content, and trailing use spacing/2 (8px); row padding uses layout/container/insetDense.",
+      "Dividers use semantic/border/subtle and borderWidth/default; show dividers only between items so they respect card margins.",
+      "Leading icon is always an **Icon / Action** instance from the Figma Icons page (141:896); API keys: microchip, medicalDocument, injection, care, notifications, notificationsBadge, present.",
+      "Chevron is visible only for actionable rows; informational rows are not navigable and must hide the chevron.",
+      "Title row is a horizontal flex line (no wrap between title block and chip) with spacing/2 gap and align-items center; the title text may wrap to multiple lines like body copy; chip stays beside the title column and stays vertically centered to the wrapped title block.",
+      "Chip variant priority must stay aligned with row variant priority (urgent/high/normal/low).",
+      "Use semantic/background/surface, semantic/border/subtle, and radius/md for the outer card; use component/chip/* only for the composed priority chip."
+    ]
+  },
+  "variants": {
+    "item": {
+      "type": ["actionable", "informational"],
+      "priority": ["urgent", "high", "normal", "low"],
+      "hasChip": [true, false],
+      "hasMetadata": [true, false],
+      "hasIcon": [true, false],
+      "hasDivider": [true, false],
+      "hasChevron": [true, false],
+      "leadingIcon": [
+        "microchip",
+        "medicalDocument",
+        "injection",
+        "care",
+        "notifications",
+        "notificationsBadge",
+        "present"
+      ],
+      "progressStatus": ["none", "blocked", "reviewing", "processingPayment", "paid"],
+      "isClickable": [true, false],
+      "density": ["compact", "default"],
+      "state": ["default", "pressed", "disabled"]
+    },
+    "container": {
+      "grouping": ["grouped", "flat"]
+    }
+  },
+  "layout": {
+    "zones": ["leading", "content-column", "trailing-chevron"],
+    "behavior": "Rounded card container with vertical list inside; entire row is the hit target when clickable."
+  },
+  "tokens": [
+    "radius/md",
+    "radius/full",
+    "borderWidth/default",
+    "component/chip/base/paddingX",
+    "component/chip/base/paddingY",
+    "component/chip/base/radius",
+    "component/chip/status/danger/bg",
+    "component/chip/status/danger/text",
+    "component/chip/status/warning/bg",
+    "component/chip/status/warning/text",
+    "component/chip/status/info/bg",
+    "component/chip/status/info/text",
+    "component/chip/status/success/bg",
+    "component/chip/status/success/text",
+    "semantic/background/surface",
+    "semantic/background/surfaceAlt",
+    "semantic/text/primary",
+    "semantic/text/secondary",
+    "semantic/text/disabled",
+    "semantic/border/subtle",
+    "semantic/icon/primary",
+    "semantic/icon/secondary",
+    "semantic/icon/muted",
+    "semantic/icon/inverse",
+    "semantic/icon/brand",
+    "semantic/icon/accent",
+    "semantic/status/danger/bg",
+    "semantic/status/danger/text",
+    "semantic/status/danger/progress",
+    "semantic/status/warning/bg",
+    "semantic/status/warning/text",
+    "semantic/status/info/bg",
+    "semantic/status/info/text",
+    "semantic/status/success/bg",
+    "semantic/status/success/text",
+    "semantic/focus/ring",
+    "semantic/focus/ringWidth",
+    "layout/screen/paddingX",
+    "layout/section/gap",
+    "spacing/2",
+    "spacing/3",
+    "spacing/4",
+    "layout/icon/size/sm",
+    "layout/icon/size/md",
+    "layout/icon/size/lg",
+    "layout/container/insetDense",
+    "typography/body",
+    "typography/bodySmall",
+    "typography/caption",
+    "typography/label/sm-semibold/fontSize",
+    "fontWeight/semibold",
+    "Musky/Typography/Body Small Semibold",
+    "Musky/Typography/Body Small Regular",
+    "Musky/Typography/Label Small",
+    "Musky/Typography/Caption"
+  ],
+  "accessibility": {
+    "role": "listitem or button when actionable",
+    "keyboardSupport": "Row receives focus as a single control; chevron is decorative if label is sufficient.",
+    "screenReader": "Announce title, optional chip label on the same row as the title, subtitle, and metadata when present.",
+    "focusManagement": "Use semantic/focus/ring on the row focus target.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "action_id",
+      "action_icon",
+      "action_icon_size",
+      "action_list_default_icon_size",
+      "action_icon_tone",
+      "action_title",
+      "action_description",
+      "action_label",
+      "task_priority",
+      "action_status",
+      "action_type",
+      "action_target",
+      "action_payload",
+      "related_entity_type",
+      "related_entity_id",
+      "due_date",
+      "is_blocking",
+      "is_completed",
+      "is_available",
+      "action_group",
+      "display_order",
+      "list_grouping",
+      "count_actions",
+      "highest_priority",
+      "reimbursement_status",
+      "reimbursement_created_at",
+      "visibility_condition"
+    ]
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["action list", "tasks", "priority", "chevron", "chip", "pending"],
+    "context": "Use when multiple user actions must be discovered and prioritized; pair summary banner copy with highest_priority rules."
+  }
+}

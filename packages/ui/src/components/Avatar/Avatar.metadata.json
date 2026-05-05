@@ -1,0 +1,38 @@
+{
+  "component": {
+    "name": "Avatar",
+    "category": "identity",
+    "description": "Circular user avatar with image or initials fallback.",
+    "type": "display-interactive"
+  },
+  "usage": {
+    "useCases": ["user-profile-entry", "header-identity"],
+    "requiredProps": [],
+    "antiPatterns": [
+      {
+        "scenario": "Using Avatar to represent a pet in Header MVP",
+        "reason": "Header MVP only supports user avatar.",
+        "alternative": "Add a dedicated PetAvatar component when product scope requires it."
+      }
+    ]
+  },
+  "tokens": [
+    "component/avatar/size/md",
+    "component/avatar/user/bg",
+    "component/avatar/user/text",
+    "component/avatar/user/border",
+    "component/avatar/focus/ring"
+  ],
+  "accessibility": {
+    "role": "button when interactive, otherwise image-like label",
+    "keyboardSupport": "Native button when onClick is provided.",
+    "screenReader": "Use aria-label for the profile action.",
+    "focusManagement": "Uses component/avatar/focus/ring.",
+    "wcag": "AA"
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["avatar", "user", "profile", "initials"],
+    "context": "Use inside Header as a nested component instance."
+  }
+}

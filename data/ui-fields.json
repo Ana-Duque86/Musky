@@ -1,0 +1,903 @@
+{
+  "fields": [
+    {
+      "field_id": "user_name",
+      "type": "string",
+      "description": "Nombre del usuario para saludos y perfil.",
+      "example": "Eduardo",
+      "used_by": ["Header", "Profile"],
+      "required": false,
+      "fallback": "Hola"
+    },
+    {
+      "field_id": "user_avatar",
+      "type": "image_url",
+      "description": "Imagen del usuario.",
+      "example": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      "used_by": ["Header", "Profile"],
+      "required": false,
+      "fallback": "initials"
+    },
+    {
+      "field_id": "pet_name",
+      "type": "string",
+      "description": "Nombre de la mascota activa.",
+      "example": "Perrín",
+      "used_by": ["HomeCard", "Profile"],
+      "required": false,
+      "fallback": "pet placeholder"
+    },
+    {
+      "field_id": "pet_avatar",
+      "type": "image_url",
+      "description": "Imagen de la mascota activa.",
+      "example": "https://images.unsplash.com/photo-1552053831-71594a27632d",
+      "used_by": ["Profile"],
+      "required": false,
+      "fallback": "pet placeholder"
+    },
+    {
+      "field_id": "notifications_count",
+      "type": "number",
+      "description": "Número de notificaciones pendientes.",
+      "example": 2,
+      "used_by": ["Header", "NotificationList"],
+      "required": false,
+      "fallback": 0
+    },
+    {
+      "field_id": "notifications_type",
+      "type": "array",
+      "description": "Categorías de notificación pendientes.",
+      "example": ["vaccines", "appointments"],
+      "used_by": ["Header", "NotificationList"],
+      "required": false,
+      "fallback": []
+    },
+    {
+      "field_id": "rewards_status",
+      "type": "enum",
+      "description": "Estado de recompensas del usuario.",
+      "values": ["inactive", "active", "highlight"],
+      "example": "active",
+      "used_by": ["Header", "Rewards"],
+      "required": false,
+      "fallback": "inactive"
+    },
+    {
+      "field_id": "rewards_points",
+      "type": "number",
+      "description": "Puntos o saldo de recompensas.",
+      "example": 1200,
+      "used_by": ["Header", "Rewards"],
+      "required": false,
+      "fallback": 0
+    },
+    {
+      "field_id": "reward_id",
+      "type": "string",
+      "description": "Identificador unico de una recompensa.",
+      "example": "rew_001",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false
+    },
+    {
+      "field_id": "reward_amount",
+      "type": "number",
+      "description": "Cantidad monetaria o valor numerico de una recompensa.",
+      "example": 25,
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false
+    },
+    {
+      "field_id": "reward_currency",
+      "type": "string",
+      "description": "Moneda de la recompensa.",
+      "example": "EUR",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false,
+      "fallback": "EUR"
+    },
+    {
+      "field_id": "reward_status",
+      "type": "enum",
+      "description": "Estado de la recompensa.",
+      "values": ["pending", "active", "expired"],
+      "example": "pending",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false,
+      "fallback": "pending"
+    },
+    {
+      "field_id": "reward_activation_date",
+      "type": "string",
+      "description": "Fecha en la que la recompensa se activa (ISO 8601 date).",
+      "example": "2026-02-09",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false
+    },
+    {
+      "field_id": "rewards_total",
+      "type": "number",
+      "description": "Total acumulado de recompensas.",
+      "example": 50,
+      "used_by": ["DoubleRewardCard", "Header", "Rewards"],
+      "required": false,
+      "fallback": 0
+    },
+    {
+      "field_id": "rewards_count",
+      "type": "number",
+      "description": "Numero de recompensas disponibles o pendientes.",
+      "example": 2,
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false,
+      "fallback": 0
+    },
+    {
+      "field_id": "referral_code",
+      "type": "string",
+      "description": "Codigo de invitacion o referido del usuario.",
+      "example": "ORI02321",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false
+    },
+    {
+      "field_id": "referral_status",
+      "type": "enum",
+      "description": "Estado del codigo de referido.",
+      "values": ["active", "inactive"],
+      "example": "active",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false,
+      "fallback": "inactive"
+    },
+    {
+      "field_id": "referral_action_type",
+      "type": "enum",
+      "description": "Tipo de accion asociada al codigo de referido.",
+      "values": ["copy", "share", "invite"],
+      "example": "share",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false,
+      "fallback": "share"
+    },
+    {
+      "field_id": "referral_target",
+      "type": "string",
+      "description": "Destino o payload de la accion de referido.",
+      "example": "share_link",
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false
+    },
+    {
+      "field_id": "reward_source",
+      "type": "enum",
+      "description": "Origen de la recompensa.",
+      "values": ["referral", "promo"],
+      "example": "referral",
+      "used_by": ["DoubleRewardCard", "Rewards", "Analytics"],
+      "required": false
+    },
+    {
+      "field_id": "is_reward_available",
+      "type": "boolean",
+      "description": "Indica si una recompensa esta disponible para mostrarse o activarse.",
+      "example": true,
+      "used_by": ["DoubleRewardCard", "Rewards"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "campaign_id",
+      "type": "string",
+      "description": "Campana asociada a la recompensa o referido.",
+      "example": "camp_01",
+      "used_by": ["DoubleRewardCard", "Rewards", "Marketing"],
+      "required": false
+    },
+    {
+      "field_id": "item_id",
+      "type": "string",
+      "description": "Identificador unico de un item reutilizable de UI.",
+      "example": "item_01",
+      "used_by": ["Card", "CardCarousel", "Global"],
+      "required": false
+    },
+    {
+      "field_id": "item_type",
+      "type": "enum",
+      "description": "Tipo funcional de item mostrado en cards o carruseles.",
+      "values": ["card", "promo", "reward", "feature", "content"],
+      "example": "promo",
+      "used_by": ["Card", "CardCarousel"],
+      "required": false,
+      "fallback": "card"
+    },
+    {
+      "field_id": "title",
+      "type": "string",
+      "description": "Titulo visible principal de un item de contenido.",
+      "example": "Anade microchip",
+      "used_by": ["Card", "CardCarousel"],
+      "required": false
+    },
+    {
+      "field_id": "description",
+      "type": "string",
+      "description": "Subtitulo o descripcion breve de un item de contenido.",
+      "example": "Necesario para activar reembolsos",
+      "used_by": ["Card", "CardCarousel"],
+      "required": false
+    },
+    {
+      "field_id": "priority",
+      "type": "enum",
+      "description": "Prioridad generica de item para chips y orden visual.",
+      "values": ["required", "pending", "next", "info"],
+      "example": "required",
+      "used_by": ["Card", "CardCarousel"],
+      "required": false,
+      "fallback": "info"
+    },
+    {
+      "field_id": "image_url",
+      "type": "image_url",
+      "description": "Imagen opcional asociada a una card.",
+      "example": "https://images.unsplash.com/photo-1552053831-71594a27632d",
+      "used_by": ["Card", "CardCarousel"],
+      "required": false
+    },
+    {
+      "field_id": "is_clickable",
+      "type": "boolean",
+      "description": "Indica si la card completa es accionable o navegable.",
+      "example": true,
+      "used_by": ["Card"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "list_order",
+      "type": "number",
+      "description": "Orden visual de un item dentro de una coleccion o carrusel.",
+      "example": 1,
+      "used_by": ["Card", "CardCarousel"],
+      "required": false
+    },
+    {
+      "field_id": "visibility",
+      "type": "boolean",
+      "description": "Indica si un item o coleccion debe mostrarse.",
+      "example": true,
+      "used_by": ["Card", "CardCarousel"],
+      "required": false,
+      "fallback": true
+    },
+    {
+      "field_id": "collection_id",
+      "type": "string",
+      "description": "Identificador de grupo o coleccion de items.",
+      "example": "rewards",
+      "used_by": ["CardCarousel"],
+      "required": false
+    },
+    {
+      "field_id": "selected_content_type",
+      "type": "enum",
+      "description": "Filtro de tipo de contenido seleccionado. Si no es 'all', la card no debe repetir la etiqueta de tipo.",
+      "values": ["all", "promo", "reward", "feature", "content"],
+      "example": "promo",
+      "used_by": ["CardCarousel"],
+      "required": false,
+      "fallback": "all"
+    },
+    {
+      "field_id": "has_tractive",
+      "type": "boolean",
+      "description": "Indica si la mascota o usuario ya tiene un dispositivo Tractive activo.",
+      "example": false,
+      "used_by": ["CardCarousel", "Promotions"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "benefit_eligibility",
+      "type": "enum",
+      "description": "Elegibilidad del usuario para ver o activar un beneficio promocional.",
+      "values": ["eligible", "ineligible", "active", "unknown"],
+      "example": "eligible",
+      "used_by": ["Card", "CardCarousel", "Promotions"],
+      "required": false,
+      "fallback": "unknown"
+    },
+    {
+      "field_id": "reimbursement_status",
+      "type": "enum",
+      "description": "Estado de progreso de un reembolso mostrado como barras segmentadas.",
+      "values": ["blocked", "reviewing", "processing_payment", "paid"],
+      "example": "reviewing",
+      "used_by": ["ActionList", "Reimbursements"],
+      "required": false,
+      "fallback": "blocked"
+    },
+    {
+      "field_id": "reimbursement_created_at",
+      "type": "string",
+      "description": "Fecha de creacion de la solicitud de reembolso (ISO 8601 date). En UI puede mostrarse como fecha corta localizada.",
+      "example": "2026-01-18",
+      "used_by": ["ActionList", "Reimbursements"],
+      "required": false
+    },
+    {
+      "field_id": "action_id",
+      "type": "string",
+      "description": "Identificador unico de una accion ejecutable. Obligatorio para botones tipicos; opcional si el surface no tiene CTA (p. ej. Banner solo informativo).",
+      "example": "act_continue_onboarding",
+      "used_by": ["Button", "IconButton", "SegmentedControl", "Banner", "ActionList"],
+      "required": false
+    },
+    {
+      "field_id": "action_label",
+      "type": "string",
+      "description": "Texto visible o nombre accesible de la accion.",
+      "example": "Continuar",
+      "used_by": ["Button", "IconButton", "Banner", "ActionList", "Card"],
+      "required": false
+    },
+    {
+      "field_id": "action_icon",
+      "type": "string",
+      "description": "Clave logica del icono leading; valores alineados con Figma Icons: microchip, medicalDocument (59:1493), injection (59:1513), care (59:1519), notifications (141:962), notificationsBadge (141:963), present (141:964). En ActionList el tono por defecto es secondary salvo override.",
+      "example": "microchip",
+      "used_by": ["ActionList", "IconButton"],
+      "required": false
+    },
+    {
+      "field_id": "action_icon_size",
+      "type": "enum",
+      "description": "Tamano del icono en listas y superficies (Figma layout/icon/size sm|md|lg → 24|38|48 px).",
+      "values": ["sm", "md", "lg"],
+      "example": "md",
+      "used_by": ["ActionList", "Icon", "Card"],
+      "required": false,
+      "fallback": "md"
+    },
+    {
+      "field_id": "action_list_default_icon_size",
+      "type": "enum",
+      "description": "Tamano por defecto del icono leading en ActionList cuando un item no define action_icon_size (por defecto en codigo es sm=24px para todas las listas).",
+      "values": ["sm", "md", "lg"],
+      "example": "sm",
+      "used_by": ["ActionList"],
+      "required": false,
+      "fallback": "sm"
+    },
+    {
+      "field_id": "action_icon_tone",
+      "type": "enum",
+      "description": "Intencion de color del icono (semantic/icon/* o semantic/status/*/icon).",
+      "values": [
+        "primary",
+        "secondary",
+        "muted",
+        "inverse",
+        "brand",
+        "brandPink",
+        "accent",
+        "success",
+        "warning",
+        "danger",
+        "info",
+        "promo"
+      ],
+      "example": "primary",
+      "used_by": ["ActionList", "Icon", "Card"],
+      "required": false,
+      "fallback": "primary"
+    },
+    {
+      "field_id": "action_type",
+      "type": "enum",
+      "description": "Tipo funcional de la accion.",
+      "values": ["navigation", "submit", "toggle", "open_overlay", "external_link", "dismiss", "task", "info"],
+      "example": "navigation",
+      "used_by": ["Button", "IconButton", "Banner", "ActionList", "Card"],
+      "required": false
+    },
+    {
+      "field_id": "action_title",
+      "type": "string",
+      "description": "Titulo principal de una fila de accion (lista, tarjeta de tarea).",
+      "example": "Anade el microchip",
+      "used_by": ["ActionList", "Card"],
+      "required": false
+    },
+    {
+      "field_id": "action_description",
+      "type": "string",
+      "description": "Subtitulo o contexto de la accion (consecuencia, detalle breve). En ActionList un salto de linea (\\n) en el texto se muestra como segunda linea (p. ej. caducidad).",
+      "example": "No puedes solicitar tu reembolso",
+      "used_by": ["ActionList", "Card"],
+      "required": false
+    },
+    {
+      "field_id": "task_priority",
+      "type": "enum",
+      "description": "Prioridad de negocio para ordenar y chips de lista de acciones (no confundir con action_priority del Button System).",
+      "values": ["urgent", "high", "normal", "low"],
+      "example": "urgent",
+      "used_by": ["ActionList", "Banner"],
+      "required": false,
+      "fallback": "normal"
+    },
+    {
+      "field_id": "action_status",
+      "type": "enum",
+      "description": "Estado de lifecycle de la accion en lista.",
+      "values": ["pending", "completed", "blocked"],
+      "example": "pending",
+      "used_by": ["ActionList", "Card"],
+      "required": false,
+      "fallback": "pending"
+    },
+    {
+      "field_id": "due_date",
+      "type": "string",
+      "description": "Fecha relevante para la accion (ISO 8601 date).",
+      "example": "2026-06-01",
+      "used_by": ["ActionList", "Reminder"],
+      "required": false
+    },
+    {
+      "field_id": "action_group",
+      "type": "string",
+      "description": "Etiqueta de agrupacion logica (onboarding, salud, cuenta).",
+      "example": "onboarding",
+      "used_by": ["ActionList"],
+      "required": false
+    },
+    {
+      "field_id": "display_order",
+      "type": "number",
+      "description": "Orden de visualizacion dentro del grupo o lista.",
+      "example": 1,
+      "used_by": ["ActionList"],
+      "required": false
+    },
+    {
+      "field_id": "list_grouping",
+      "type": "enum",
+      "description": "Presentacion del contenedor de lista.",
+      "values": ["grouped", "flat"],
+      "example": "grouped",
+      "used_by": ["ActionList"],
+      "required": false,
+      "fallback": "flat"
+    },
+    {
+      "field_id": "count_actions",
+      "type": "number",
+      "description": "Recuento total de acciones pendientes (banner resumen).",
+      "example": 3,
+      "used_by": ["ActionList", "Banner"],
+      "required": false
+    },
+    {
+      "field_id": "highest_priority",
+      "type": "enum",
+      "description": "Prioridad mas alta entre las acciones visibles (copy del banner superior).",
+      "values": ["urgent", "high", "normal", "low", "none"],
+      "example": "urgent",
+      "used_by": ["ActionList", "Banner"],
+      "required": false,
+      "fallback": "none"
+    },
+    {
+      "field_id": "is_completed",
+      "type": "boolean",
+      "description": "La accion ya no requiere interaccion.",
+      "example": false,
+      "used_by": ["ActionList", "Card"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "action_state",
+      "type": "enum",
+      "description": "Estado interactivo de la accion.",
+      "values": ["enabled", "disabled", "loading"],
+      "example": "enabled",
+      "used_by": ["Button"],
+      "required": false,
+      "fallback": "enabled"
+    },
+    {
+      "field_id": "action_priority",
+      "type": "enum",
+      "description": "Prioridad visual que mapea a la variante del Button System.",
+      "values": ["primary", "secondary", "tertiary", "link"],
+      "example": "primary",
+      "used_by": ["Button", "IconButton"],
+      "required": false,
+      "fallback": "secondary"
+    },
+    {
+      "field_id": "action_target",
+      "type": "string",
+      "description": "Ruta, endpoint o destino de la accion.",
+      "example": "/onboarding/pet-type",
+      "used_by": ["Button", "IconButton", "Banner", "ActionList", "Card"],
+      "required": false
+    },
+    {
+      "field_id": "action_payload",
+      "type": "object",
+      "description": "Datos enviados al ejecutar la accion.",
+      "example": { "petType": "dog" },
+      "used_by": ["Button", "IconButton", "Banner", "ActionList", "Card"],
+      "required": false,
+      "fallback": {}
+    },
+    {
+      "field_id": "selection_value",
+      "type": "string",
+      "description": "Valor actualmente seleccionado en un control de seleccion.",
+      "example": "perro",
+      "used_by": ["SegmentedControl"],
+      "required": true
+    },
+    {
+      "field_id": "selection_options",
+      "type": "array",
+      "description": "Opciones disponibles en un control de seleccion.",
+      "example": ["perro", "gato"],
+      "used_by": ["SegmentedControl"],
+      "required": true
+    },
+    {
+      "field_id": "is_selected",
+      "type": "boolean",
+      "description": "Indica si una opcion esta seleccionada.",
+      "example": true,
+      "used_by": ["SegmentedControl"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "is_available",
+      "type": "boolean",
+      "description": "Indica si una opcion o accion esta disponible.",
+      "example": true,
+      "used_by": ["Button", "SegmentedControl", "ActionList"],
+      "required": false,
+      "fallback": true
+    },
+    {
+      "field_id": "text_id",
+      "type": "string",
+      "description": "Identificador unico de texto.",
+      "example": "txt_001",
+      "used_by": ["Typography", "Global"],
+      "required": true
+    },
+    {
+      "field_id": "text_value",
+      "type": "string",
+      "description": "Contenido textual que se renderiza en la interfaz.",
+      "example": "Hola Eduardo",
+      "used_by": ["Typography", "Global"],
+      "required": true
+    },
+    {
+      "field_id": "text_type",
+      "type": "enum",
+      "description": "Estilo tipografico base de la rampa (sin variantes por componente). Los enlaces usan body + token de enlace en la UI, no un tipo link separado.",
+      "values": ["display", "h1", "h2", "h3", "body-large", "body", "body-small", "label", "label-small", "caption", "overline"],
+      "example": "h1",
+      "used_by": ["Typography"],
+      "required": true
+    },
+    {
+      "field_id": "text_priority",
+      "type": "enum",
+      "description": "Nivel jerarquico del texto dentro de la UI.",
+      "values": ["high", "medium", "low"],
+      "example": "high",
+      "used_by": ["Typography", "UI"],
+      "required": false,
+      "fallback": "medium"
+    },
+    {
+      "field_id": "text_role",
+      "type": "enum",
+      "description": "Rol semantico del contenido textual.",
+      "values": ["title", "subtitle", "description", "action", "metadata", "status", "helper", "error"],
+      "example": "title",
+      "used_by": ["Typography", "Global"],
+      "required": true
+    },
+    {
+      "field_id": "text_state",
+      "type": "enum",
+      "description": "Estado visual del texto.",
+      "values": ["default", "secondary", "disabled", "inverse", "highlight"],
+      "example": "default",
+      "used_by": ["Typography", "UI"],
+      "required": false,
+      "fallback": "default"
+    },
+    {
+      "field_id": "text_align",
+      "type": "enum",
+      "description": "Alineacion del texto dentro del layout.",
+      "values": ["left", "center", "right"],
+      "example": "left",
+      "used_by": ["Typography", "Layout"],
+      "required": false,
+      "fallback": "left"
+    },
+    {
+      "field_id": "text_truncate",
+      "type": "boolean",
+      "description": "Indica si el texto puede cortarse visualmente.",
+      "example": false,
+      "used_by": ["Typography", "UI"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "text_max_lines",
+      "type": "number",
+      "description": "Numero maximo de lineas visibles antes de truncar.",
+      "example": 2,
+      "used_by": ["Typography", "Cards"],
+      "required": false
+    },
+    {
+      "field_id": "text_emphasis",
+      "type": "enum",
+      "description": "Enfasis visual o semantico aplicado al texto.",
+      "values": ["default", "strong", "subtle"],
+      "example": "strong",
+      "used_by": ["Typography", "UI"],
+      "required": false,
+      "fallback": "default"
+    },
+    {
+      "field_id": "message_id",
+      "type": "string",
+      "description": "Identificador estable del mensaje contextual.",
+      "example": "msg_001",
+      "used_by": ["Banner", "Alert", "Notification"],
+      "required": false
+    },
+    {
+      "field_id": "message_type",
+      "type": "enum",
+      "description": "Tipo semantico del mensaje para superficies globales.",
+      "values": ["info", "warning", "promo", "danger", "success"],
+      "example": "info",
+      "used_by": ["Banner", "Alert", "Chip"],
+      "required": false
+    },
+    {
+      "field_id": "message_priority",
+      "type": "enum",
+      "description": "Prioridad del mensaje respecto a otros avisos.",
+      "values": ["low", "medium", "high", "critical"],
+      "example": "medium",
+      "used_by": ["Banner", "ActionList"],
+      "required": false,
+      "fallback": "medium"
+    },
+    {
+      "field_id": "message_title",
+      "type": "string",
+      "description": "Titulo opcional del banner (jerarquia sobre el cuerpo).",
+      "example": "Oferta Familia Numerosa",
+      "used_by": ["Banner", "Modal", "Card"],
+      "required": false
+    },
+    {
+      "field_id": "message_body",
+      "type": "string",
+      "description": "Texto principal del banner u overlay contextual.",
+      "example": "Si tienes mas de una mascota podras agregarla luego.",
+      "used_by": ["Banner", "Card", "Notification"],
+      "required": false
+    },
+    {
+      "field_id": "message_icon",
+      "type": "string",
+      "description": "Contenido del icono leading del Banner: emoji (p. ej. alerta), texto corto o clave logica segun producto; si se omite, Banner usa el glifo por defecto de la variante.",
+      "example": "⚠️",
+      "used_by": ["Banner", "Chip", "Home"],
+      "required": false
+    },
+    {
+      "field_id": "message_has_action",
+      "type": "boolean",
+      "description": "Indica si el mensaje incluye CTA, link o dismiss primario.",
+      "example": true,
+      "used_by": ["Banner", "Card", "Notification"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "message_dismissible",
+      "type": "boolean",
+      "description": "Permite cerrar el mensaje sin bloquear informacion critica obligatoria.",
+      "example": true,
+      "used_by": ["Banner", "Alert"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "visibility_condition",
+      "type": "string",
+      "description": "Regla o flag de negocio que determina si el mensaje se muestra.",
+      "example": "has_multiple_pets_offer",
+      "used_by": ["Banner", "Personalization", "ActionList", "ContentModule"],
+      "required": false
+    },
+    {
+      "field_id": "campaign_start_date",
+      "type": "string",
+      "description": "Fecha de inicio de visibilidad (ISO 8601 date).",
+      "example": "2026-05-01",
+      "used_by": ["Banner", "Campaign"],
+      "required": false
+    },
+    {
+      "field_id": "campaign_end_date",
+      "type": "string",
+      "description": "Fecha final de visibilidad (ISO 8601 date).",
+      "example": "2026-05-31",
+      "used_by": ["Banner", "Campaign"],
+      "required": false
+    },
+    {
+      "field_id": "audience_segment",
+      "type": "enum",
+      "description": "Segmento de audiencia al que aplica el mensaje.",
+      "values": ["new_user", "active_user", "multi_pet", "all"],
+      "example": "active_user",
+      "used_by": ["Banner", "Personalization"],
+      "required": false
+    },
+    {
+      "field_id": "related_entity_type",
+      "type": "enum",
+      "description": "Tipo de entidad relacionada con el mensaje.",
+      "values": ["user", "pet", "policy", "appointment", "promotion", "none"],
+      "example": "pet",
+      "used_by": ["Banner", "Global"],
+      "required": false,
+      "fallback": "none"
+    },
+    {
+      "field_id": "related_entity_id",
+      "type": "string",
+      "description": "Identificador de la entidad relacionada.",
+      "example": "pet_001",
+      "used_by": ["Banner", "Global"],
+      "required": false
+    },
+    {
+      "field_id": "message_is_blocking",
+      "type": "boolean",
+      "description": "Si el mensaje impide continuar el flujo hasta resolverse.",
+      "example": false,
+      "used_by": ["Banner", "Validation", "Modal", "ActionList"],
+      "required": false,
+      "fallback": false
+    },
+    {
+      "field_id": "message_read_status",
+      "type": "enum",
+      "description": "Estado de lectura o cierre del mensaje.",
+      "values": ["unread", "read", "dismissed"],
+      "example": "unread",
+      "used_by": ["Banner", "Notification"],
+      "required": false,
+      "fallback": "unread"
+    },
+    {
+      "field_id": "content_id",
+      "type": "string",
+      "description": "Identificador unico del articulo o pieza de contenido.",
+      "example": "cnt_001",
+      "used_by": ["ContentModule", "CMS"],
+      "required": false
+    },
+    {
+      "field_id": "content_title",
+      "type": "string",
+      "description": "Titulo principal del contenido editorial.",
+      "example": "Como detectar problemas estomacales a tiempo",
+      "used_by": ["ContentModule"],
+      "required": true
+    },
+    {
+      "field_id": "content_description",
+      "type": "string",
+      "description": "Resumen o introduccion breve del contenido.",
+      "example": "Conoce los primeros sintomas...",
+      "used_by": ["ContentModule"],
+      "required": false
+    },
+    {
+      "field_id": "content_category",
+      "type": "enum",
+      "description": "Categoria editorial para filtro y tono de etiqueta.",
+      "values": ["salud", "prevencion", "alimentacion", "general"],
+      "example": "salud",
+      "used_by": ["ContentModule", "Personalization"],
+      "required": false,
+      "fallback": "general"
+    },
+    {
+      "field_id": "content_type",
+      "type": "enum",
+      "description": "Tipo de pieza de contenido.",
+      "values": ["article", "tip", "news"],
+      "example": "article",
+      "used_by": ["ContentModule", "CMS"],
+      "required": false,
+      "fallback": "article"
+    },
+    {
+      "field_id": "content_image",
+      "type": "image_url",
+      "description": "Imagen de cabecera del contenido.",
+      "example": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
+      "used_by": ["ContentModule"],
+      "required": false
+    },
+    {
+      "field_id": "content_url",
+      "type": "string",
+      "description": "URL o ruta de navegacion al detalle del contenido.",
+      "example": "/articulo/estomago",
+      "used_by": ["ContentModule"],
+      "required": true
+    },
+    {
+      "field_id": "content_duration",
+      "type": "string",
+      "description": "Tiempo estimado de lectura o consumo.",
+      "example": "3 min lectura",
+      "used_by": ["ContentModule"],
+      "required": false
+    },
+    {
+      "field_id": "content_personalization",
+      "type": "enum",
+      "description": "Segmento o contexto de personalizacion del contenido.",
+      "values": ["dog_owner", "cat_owner", "all"],
+      "example": "dog_owner",
+      "used_by": ["ContentModule", "Personalization"],
+      "required": false,
+      "fallback": "all"
+    },
+    {
+      "field_id": "filter_selected",
+      "type": "string",
+      "description": "Valor del filtro de categoria activo en el modulo de contenido.",
+      "example": "salud",
+      "used_by": ["ContentModule"],
+      "required": false,
+      "fallback": "all"
+    },
+    {
+      "field_id": "filter_options",
+      "type": "array",
+      "description": "Lista de opciones de filtro (valor y etiqueta visible).",
+      "example": [{ "value": "all", "label": "Todos" }, { "value": "salud", "label": "Salud" }],
+      "used_by": ["ContentModule"],
+      "required": false,
+      "fallback": []
+    }
+  ]
+}

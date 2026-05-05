@@ -1,0 +1,221 @@
+@import "../../styles/tokens.css";
+
+.musky-action-list {
+  box-sizing: border-box;
+  font-family: var(--typography-body-font-family);
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
+
+.musky-action-list--grouped {
+  background: var(--semantic-background-surface);
+  border: var(--border-width-default) solid var(--semantic-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 0;
+}
+
+.musky-action-list--flat {
+  background: transparent;
+  padding: 0;
+}
+
+.musky-action-list__item {
+  position: relative;
+}
+
+.musky-action-list__item--divided::after {
+  background: var(--semantic-border-subtle);
+  bottom: 0;
+  content: "";
+  height: var(--border-width-default);
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.musky-action-list__row {
+  align-items: flex-start;
+  background: var(--semantic-background-surface);
+  border: 0;
+  box-sizing: border-box;
+  color: var(--semantic-text-primary);
+  display: flex;
+  font: inherit;
+  gap: var(--space-2);
+  min-height: 0;
+  min-width: 0;
+  padding: var(--layout-container-inset-dense);
+  text-align: left;
+  width: 100%;
+}
+
+button.musky-action-list__row {
+  cursor: pointer;
+}
+
+button.musky-action-list__row:hover {
+  background: var(--semantic-background-surface-alt);
+}
+
+button.musky-action-list__row:focus-visible {
+  outline: var(--semantic-focus-ring-width) solid var(--semantic-focus-ring);
+  outline-offset: calc(var(--semantic-focus-ring-offset) * -1);
+}
+
+.musky-action-list__leading {
+  flex-shrink: 0;
+}
+
+.musky-action-list__leading--sm {
+  flex: 0 0 var(--layout-icon-size-sm);
+  height: var(--layout-icon-size-sm);
+  width: var(--layout-icon-size-sm);
+}
+
+.musky-action-list__leading--md {
+  flex: 0 0 var(--layout-icon-size-md);
+  height: var(--layout-icon-size-md);
+  width: var(--layout-icon-size-md);
+}
+
+.musky-action-list__leading--lg {
+  flex: 0 0 var(--layout-icon-size-lg);
+  height: var(--layout-icon-size-lg);
+  width: var(--layout-icon-size-lg);
+}
+
+.musky-action-list__leading-inner {
+  align-items: center;
+  background: var(--semantic-background-surface-alt);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.musky-action-list__leading-inner .musky-icon {
+  display: block;
+}
+
+.musky-action-list__content {
+  display: grid;
+  flex: 1 1 auto;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.musky-action-list__title-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.musky-action-list__title-row .musky-chip {
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-block: 4px;
+  min-width: 72px;
+  overflow-wrap: anywhere;
+  padding-block: 4px;
+  padding-inline: var(--space-1);
+  text-align: center;
+  width: 72px;
+}
+
+.musky-action-list__title {
+  color: var(--semantic-text-primary);
+  flex: 1 1 auto;
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: var(--typography-body-line-height);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.musky-action-list__description {
+  color: var(--semantic-text-secondary);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  letter-spacing: var(--typography-body-small-letter-spacing);
+  line-height: var(--typography-body-small-line-height);
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.musky-action-list__metadata {
+  color: var(--semantic-text-secondary);
+  font-family: var(--typography-caption-font-family);
+  font-size: var(--typography-caption-font-size);
+  font-weight: var(--typography-caption-font-weight);
+  letter-spacing: var(--typography-caption-letter-spacing);
+  line-height: var(--typography-caption-line-height);
+}
+
+.musky-action-list__progress {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 2px;
+  margin-top: var(--space-2);
+  width: 100%;
+}
+
+.musky-action-list__progress-segment {
+  background: var(--semantic-border-subtle);
+  border-radius: var(--radius-full);
+  display: block;
+  height: 6px;
+  min-width: 0;
+}
+
+.musky-action-list__progress--blocked .musky-action-list__progress-segment--active {
+  background: var(--semantic-status-danger-progress);
+}
+
+.musky-action-list__progress--reviewing .musky-action-list__progress-segment--active {
+  background: var(--color-info-on-surface);
+}
+
+.musky-action-list__progress--processingPayment .musky-action-list__progress-segment--active {
+  background: var(--color-info-on-surface);
+}
+
+.musky-action-list__progress--paid .musky-action-list__progress-segment--active {
+  background: var(--color-success-on-surface);
+}
+
+.musky-action-list__chevron-slot {
+  align-items: center;
+  align-self: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 var(--layout-icon-size-sm);
+  height: var(--layout-icon-size-sm);
+  justify-content: center;
+  width: var(--layout-icon-size-sm);
+}
+
+.musky-action-list__chevron {
+  align-items: center;
+  color: var(--semantic-icon-primary);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: var(--layout-icon-size-sm);
+  height: var(--layout-icon-size-sm);
+  justify-content: center;
+  line-height: 1;
+  width: var(--layout-icon-size-sm);
+}

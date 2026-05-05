@@ -1,0 +1,872 @@
+.musky-health {
+  box-sizing: border-box;
+  color: var(--semantic-text-primary);
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  line-height: var(--typography-body-line-height);
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 24px 20px 40px;
+  text-align: left;
+  width: 100%;
+}
+
+.musky-health__header {
+  margin-bottom: 20px;
+}
+
+.musky-health__header--toolbar {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.musky-health__title {
+  font-size: var(--typography-h2-font-size);
+  font-weight: var(--typography-h2-font-weight);
+  line-height: var(--typography-h2-line-height);
+  margin: 0 0 4px;
+}
+
+.musky-health__meta {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-body-small-font-size);
+  margin: 0;
+}
+
+.musky-health__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.musky-health__h2 {
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: var(--typography-h3-line-height);
+  margin: 0 0 8px;
+}
+
+.musky-health__h2--inline {
+  margin-bottom: 12px;
+}
+
+.musky-health__section {
+  margin-bottom: 24px;
+}
+
+.musky-health__section-lead {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+.musky-health__hero-row {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-bottom: 20px;
+}
+
+.musky-health__card {
+  background: var(--semantic-background-surface-alt);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+
+.musky-health__card--readiness {
+  border-width: 2px;
+}
+
+.musky-health__card--readiness.musky-health__card--si {
+  border-color: var(--semantic-status-success-icon);
+}
+
+.musky-health__card--readiness.musky-health__card--casi {
+  border-color: var(--semantic-status-warning-icon);
+}
+
+.musky-health__card--readiness.musky-health__card--no {
+  border-color: var(--semantic-status-danger-icon);
+}
+
+.musky-health__readiness-label {
+  font-size: var(--typography-display-font-size);
+  font-weight: var(--typography-font-weight-bold);
+  line-height: 1.1;
+  margin: 4px 0 8px;
+}
+
+.musky-health__card--score .musky-health__big-score {
+  font-size: 36px;
+  font-weight: var(--typography-font-weight-bold);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 10px;
+}
+
+.musky-health__big-score-suffix {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  margin-left: 4px;
+}
+
+.musky-health__hint {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.musky-health__hint--tight {
+  margin-top: 10px;
+}
+
+.musky-health__dimensions {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.musky-health__dim-card {
+  background: var(--semantic-background-surface);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.musky-health__dim-label {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-medium);
+  margin: 0 0 6px;
+}
+
+.musky-health__dim-score {
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-font-weight-bold);
+  margin: 0 0 8px;
+}
+
+.musky-health__triple {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-bottom: 24px;
+}
+
+.musky-health__card--stretch {
+  min-height: 200px;
+}
+
+.musky-health__card--week {
+  background: linear-gradient(
+    145deg,
+    var(--semantic-background-surface-alt) 0%,
+    var(--semantic-status-promo-bg) 120%
+  );
+}
+
+.musky-health__bullet-list,
+.musky-health__numbered-list,
+.musky-health__checklist {
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.musky-health__checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.musky-health__checklist li {
+  margin-bottom: 10px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.musky-health__checklist li::before {
+  color: var(--semantic-status-success-icon);
+  content: "✓";
+  left: 0;
+  position: absolute;
+}
+
+.musky-health__numbered-list li {
+  margin-bottom: 8px;
+}
+
+.musky-health__bullet-list li {
+  margin-bottom: 8px;
+}
+
+.musky-health__card--tokens-preview {
+  margin-bottom: 8px;
+}
+
+.musky-health__token-bars {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.musky-health__token-bar-head {
+  display: flex;
+  font-size: var(--typography-body-small-font-size);
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.musky-health__narrative {
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-body-font-size);
+  line-height: 1.55;
+  margin: 0 0 8px;
+}
+
+.musky-health__tokens-page {
+  display: grid;
+  gap: 16px;
+}
+
+.musky-health__token-stat-chips {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 20px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .musky-health__token-stat-chips {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .musky-health__token-stat-chips {
+    grid-template-columns: 1fr;
+  }
+}
+
+.musky-health__token-stat-chip {
+  background: var(--semantic-background-surface-alt);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px 12px;
+}
+
+.musky-health__token-stat-chip__label-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.musky-health__token-stat-chip__label {
+  color: var(--semantic-text-secondary);
+  flex: 1 1 auto;
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.35;
+  min-width: 0;
+}
+
+.musky-health__token-stat-chip__help {
+  background: var(--semantic-background-surface);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 999px;
+  color: var(--semantic-text-secondary);
+  cursor: help;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  height: 22px;
+  line-height: 1;
+  padding: 0;
+  width: 22px;
+}
+
+.musky-health__token-stat-chip__help:hover,
+.musky-health__token-stat-chip__help:focus-visible {
+  border-color: var(--semantic-text-secondary);
+  color: var(--semantic-text-primary);
+  outline: none;
+}
+
+.musky-health__token-stat-chip__value {
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: 1.2;
+}
+
+.musky-health__components-page .musky-health__section-lead {
+  margin-bottom: 14px;
+}
+
+.musky-health__bar-track {
+  background: var(--semantic-border-subtle);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.musky-health__bar-fill {
+  background: var(--semantic-status-success-icon);
+  border-radius: 999px;
+  height: 100%;
+  min-width: 4px;
+  transition: width 0.2s ease;
+}
+
+.musky-health__bar-track--mid .musky-health__bar-fill {
+  background: var(--semantic-status-warning-icon);
+}
+
+.musky-health__bar-track--bad .musky-health__bar-fill {
+  background: var(--semantic-status-danger-icon);
+}
+
+.musky-health__cell-score {
+  min-width: 88px;
+}
+
+.musky-health__cell-score span {
+  display: block;
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  margin-bottom: 4px;
+}
+
+.musky-health__issue-cell {
+  max-width: 220px;
+}
+
+.musky-health__roadmap {
+  background: var(--semantic-status-info-bg);
+  border-radius: 12px;
+  color: var(--semantic-status-info-text);
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.5;
+  margin-top: 28px;
+  padding: 14px 18px;
+}
+
+.musky-health__roadmap strong {
+  display: block;
+  font-size: var(--typography-label-font-size);
+  margin-bottom: 6px;
+}
+
+.musky-health__table-wrap {
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 14px;
+  max-height: 520px;
+  overflow: auto;
+}
+
+.musky-health table {
+  border-collapse: collapse;
+  min-width: 880px;
+  width: 100%;
+}
+
+.musky-health th,
+.musky-health td {
+  border-bottom: 1px solid var(--semantic-border-subtle);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.musky-health th {
+  background: var(--semantic-background-surface-alt);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.musky-health td {
+  font-size: var(--typography-body-small-font-size);
+}
+
+.musky-health__pill {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--typography-font-weight-medium);
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.musky-health__pill--ok {
+  background: var(--semantic-status-success-bg);
+  color: var(--semantic-status-success-text);
+}
+
+.musky-health__pill--warn {
+  background: var(--semantic-status-warning-bg);
+  color: var(--semantic-status-warning-text);
+}
+
+.musky-health__pill--bad {
+  background: var(--semantic-status-danger-bg);
+  color: var(--semantic-status-danger-text);
+}
+
+.musky-health--detail {
+  max-width: 880px;
+}
+
+.musky-health--narrow {
+  max-width: 560px;
+}
+
+.musky-health__link {
+  color: var(--semantic-text-highlight);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.musky-health__btn-mt {
+  margin-top: 12px;
+}
+
+.musky-health__code {
+  background: var(--semantic-background-surface-alt);
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  padding: 1px 6px;
+}
+
+.musky-health__two-col {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 12px;
+}
+
+.musky-health__h3 {
+  font-size: var(--typography-label-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  margin: 0 0 8px;
+}
+
+.musky-health__card--warn {
+  border-color: var(--semantic-status-warning-icon);
+}
+
+.musky-health__bullet-list--tight li {
+  margin-bottom: 4px;
+}
+
+.musky-health__structure-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.musky-health__structure-row .musky-health__pill {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.musky-health__compare-section {
+  margin: 0;
+}
+
+.musky-health__compare-section-title {
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: var(--typography-h3-line-height);
+  margin: 0 0 6px;
+}
+
+.musky-health__hint--compare {
+  margin: 0 0 14px;
+}
+
+.musky-health__compare-block {
+  margin-bottom: 18px;
+}
+
+.musky-health__compare-block:last-child {
+  margin-bottom: 0;
+}
+
+.musky-health__compare-block-title {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-label-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  margin: 0 0 10px;
+}
+
+.musky-health__compare-subgroup {
+  margin-bottom: 16px;
+}
+
+.musky-health__compare-subgroup:last-child {
+  margin-bottom: 0;
+}
+
+.musky-health__compare-subgroup-head {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.musky-health__compare-subgroup-title {
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-font-weight-medium);
+}
+
+.musky-health__compare-table-wrap {
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.musky-health__compare-table {
+  border-collapse: collapse;
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.45;
+  min-width: 640px;
+  width: 100%;
+}
+
+.musky-health__compare-table--wide {
+  min-width: 920px;
+}
+
+.musky-health__compare-table th,
+.musky-health__compare-table td {
+  border-bottom: 1px solid var(--semantic-border-subtle);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.musky-health__compare-table th {
+  background: var(--semantic-background-surface-alt);
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+}
+
+.musky-health__compare-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.musky-health__code--table {
+  display: inline;
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 2px 4px;
+  word-break: break-word;
+}
+
+.musky-health__compare-empty {
+  color: var(--semantic-text-secondary);
+}
+
+.musky-health__compare-usage {
+  color: var(--semantic-text-primary);
+  max-width: 220px;
+}
+
+.musky-health__compare-figma-ctx {
+  color: var(--semantic-text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+  max-width: 260px;
+}
+
+.musky-health__hint--inline {
+  display: inline;
+  font-size: inherit;
+  margin: 0;
+}
+
+.musky-health__compare-empty-row {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-body-small-font-size);
+  padding: 12px 14px;
+  text-align: center;
+}
+
+.musky-health__compare-row--drift {
+  background: var(--semantic-background-surface-alt);
+  box-shadow: inset 3px 0 0 0 var(--semantic-status-warning-icon);
+}
+
+.musky-health__compare-row--drift td {
+  color: var(--semantic-text-primary);
+  font-weight: var(--typography-font-weight-medium);
+}
+
+.musky-health__compare-row--aligned {
+  opacity: 1;
+}
+
+.musky-health__compare-row--aligned td {
+  color: var(--semantic-text-primary);
+  font-weight: var(--typography-font-weight-regular);
+}
+
+.musky-health__compare-section--parity {
+  margin-top: 8px;
+}
+
+.musky-health__parity-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.musky-health__parity-card {
+  background: var(--semantic-background-surface);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 12px;
+  padding: 14px 16px 16px;
+}
+
+.musky-health__parity-card-head {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.musky-health__parity-card-title {
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  margin: 0 0 2px;
+}
+
+.musky-health__parity-component-stat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.musky-health__parity-stat-chip {
+  background: var(--semantic-background-surface-alt);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 1 1 112px;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 180px;
+  min-width: 104px;
+  padding: 8px 10px;
+}
+
+.musky-health__parity-stat-chip__label {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-label-small-font-size);
+  line-height: 1.3;
+}
+
+.musky-health__parity-stat-chip__value {
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: 1.15;
+}
+
+.musky-health__parity-stat-chip--ok {
+  border-color: var(--semantic-status-success-icon);
+}
+
+.musky-health__parity-stat-chip--ok .musky-health__parity-stat-chip__value {
+  color: var(--semantic-status-success-icon);
+}
+
+.musky-health__parity-stat-chip--bad {
+  border-color: var(--semantic-status-danger-icon);
+}
+
+.musky-health__parity-stat-chip--bad .musky-health__parity-stat-chip__value {
+  color: var(--semantic-status-danger-icon);
+}
+
+.musky-health__parity-score-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.musky-health__parity-score-label {
+  color: var(--semantic-text-secondary);
+  flex-shrink: 0;
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-medium);
+}
+
+.musky-health__parity-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.musky-health__parity-chip {
+  background: var(--semantic-background-surface-alt);
+  border: 1px solid var(--semantic-border-subtle);
+  border-radius: 999px;
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-font-weight-medium);
+  padding: 4px 10px;
+}
+
+.musky-health__parity-chip--ok {
+  border-color: var(--semantic-status-success-icon);
+  color: var(--semantic-status-success-icon);
+}
+
+.musky-health__parity-chip--bad {
+  border-color: var(--semantic-status-danger-icon);
+  color: var(--semantic-status-danger-icon);
+}
+
+.musky-health__parity-chip--score {
+  border-color: var(--color-brand-wine);
+  color: var(--color-brand-wine);
+}
+
+.musky-health__parity-score-bar {
+  flex: 1 1 140px;
+  max-width: 280px;
+  min-width: 120px;
+}
+
+.musky-health__parity-prefixes {
+  font-size: var(--typography-body-small-font-size);
+  margin: 0 0 10px;
+}
+
+.musky-health__parity-note {
+  background: var(--semantic-background-surface-alt);
+  border-left: 3px solid var(--semantic-status-info-icon);
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-body-small-font-size);
+  line-height: 1.45;
+  margin: 0 0 12px;
+  padding: 8px 12px;
+}
+
+.musky-health__parity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.musky-health__parity-global {
+  margin-bottom: 12px;
+}
+
+.musky-health__parity-global-title {
+  color: var(--semantic-text-secondary);
+  font-size: var(--typography-body-small-font-size);
+  margin: 0 0 6px;
+}
+
+.musky-health__parity-global-list {
+  font-size: 11px;
+  line-height: 1.45;
+  list-style: none;
+  margin: 0;
+  max-height: 200px;
+  overflow: auto;
+  padding: 0;
+}
+
+.musky-health__parity-global-list li {
+  border-bottom: 1px solid var(--semantic-border-subtle);
+  padding: 4px 0;
+}
+
+.musky-health__parity-global-list li:last-child {
+  border-bottom: 0;
+}
+
+.musky-health__apply-site-list {
+  font-size: 11px;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.musky-health__apply-site-list li {
+  margin-bottom: 6px;
+}
+
+.musky-health__apply-site-list li:last-child {
+  margin-bottom: 0;
+}
+
+.musky-health__code--inline {
+  font-size: 10px;
+  padding: 0 3px;
+}
+
+.musky-health__ctx-part {
+  color: var(--semantic-text-primary);
+  font-weight: var(--typography-font-weight-medium);
+}
+
+.musky-health__figma-context-stack {
+  display: block;
+}
+
+/* Pestañas del dashboard: wine en lugar del primary rosa del sistema */
+.musky-health__tabs .musky-button.musky-button--primary {
+  background: var(--color-brand-wine);
+  border-color: var(--color-brand-wine);
+  color: var(--semantic-text-inverse);
+}
+
+.musky-health__tabs .musky-button.musky-button--secondary {
+  background: var(--semantic-background-surface);
+  border-color: var(--color-brand-wine);
+  color: var(--color-brand-wine);
+}
+
+.musky-health__tabs .musky-button.musky-button--secondary:hover:not(:disabled),
+.musky-health__tabs .musky-button.musky-button--primary:hover:not(:disabled) {
+  opacity: 0.9;
+}

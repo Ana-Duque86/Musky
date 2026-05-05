@@ -1,0 +1,3107 @@
+{
+  "version": "1.0.4",
+  "metadata": {},
+  "collections": [
+    {
+      "name": "Musky — UI Tokens",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "color/neutral/transparent",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF00"
+            },
+            {
+              "name": "color/neutral/0",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "color/neutral/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FAFAFA"
+            },
+            {
+              "name": "color/neutral/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#EAEBEB"
+            },
+            {
+              "name": "color/neutral/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#A0A3A7"
+            },
+            {
+              "name": "color/neutral/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#6C7074"
+            },
+            {
+              "name": "color/neutral/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4E5255"
+            },
+            {
+              "name": "color/neutral/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1E1F1F"
+            },
+            {
+              "name": "color/neutral/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#111010"
+            },
+            {
+              "name": "color/success/surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E8F8EF"
+            },
+            {
+              "name": "color/danger/surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FCECEF"
+            },
+            {
+              "name": "color/danger/onSurface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#450408"
+            },
+            {
+              "name": "color/info/surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E8F4FD"
+            },
+            {
+              "name": "color/info/onSurface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1565C0"
+            },
+            {
+              "name": "spacing/0",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            },
+            {
+              "name": "spacing/1",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "spacing/2",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "spacing/3",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "spacing/4",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "spacing/5",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "spacing/6",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "spacing/7",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "spacing/8",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "spacing/9",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "spacing/10",
+              "type": "number",
+              "isAlias": false,
+              "value": 64
+            },
+            {
+              "name": "spacing/11",
+              "type": "number",
+              "isAlias": false,
+              "value": 80
+            },
+            {
+              "name": "spacing/12",
+              "type": "number",
+              "isAlias": false,
+              "value": 96
+            },
+            {
+              "name": "radius/none",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            },
+            {
+              "name": "radius/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "radius/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "radius/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "radius/xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "radius/full",
+              "type": "number",
+              "isAlias": false,
+              "value": 80
+            },
+            {
+              "name": "borderWidth/default",
+              "type": "number",
+              "isAlias": false,
+              "value": 1
+            },
+            {
+              "name": "borderWidth/thick",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "opacity/disabled",
+              "type": "number",
+              "isAlias": false,
+              "value": 0.5
+            },
+            {
+              "name": "size/touchMin",
+              "type": "number",
+              "isAlias": false,
+              "value": 44
+            },
+            {
+              "name": "size/button/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "size/button/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "size/icon/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "size/icon/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "fontSize/xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "fontSize/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "fontSize/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "fontSize/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "fontSize/xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 36
+            },
+            {
+              "name": "fontSize/2xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "lineHeight/xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "fontWeight/semibold",
+              "type": "number",
+              "isAlias": false,
+              "value": 600
+            },
+            {
+              "name": "lineHeight/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "lineHeight/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "lineHeight/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "lineHeight/xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 36
+            },
+            {
+              "name": "lineHeight/2xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "lineHeight/tight",
+              "type": "number",
+              "isAlias": false,
+              "value": 45.720001220703125
+            },
+            {
+              "name": "semantic/background/app",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/background/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/background/surfaceAlt",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "semantic/background/brand",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "semantic/text/primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "semantic/text/secondary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "semantic/text/tertiary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/500"
+              }
+            },
+            {
+              "name": "semantic/text/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/text/brand",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/border/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "semantic/border/subtle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "semantic/border/strong",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/700"
+              }
+            },
+            {
+              "name": "semantic/icon/primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "semantic/icon/secondary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "semantic/icon/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/action/primary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "semantic/action/primary/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/text/primary"
+              }
+            },
+            {
+              "name": "semantic/action/secondary/bg",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "semantic/action/secondary/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/text/primary"
+              }
+            },
+            {
+              "name": "semantic/action/secondary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "semantic/action/disabled/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "semantic/action/disabled/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "semantic/status/success/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/success/surface"
+              }
+            },
+            {
+              "name": "semantic/status/success/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/success/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/warning/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/warning/surface"
+              }
+            },
+            {
+              "name": "semantic/status/warning/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/warning/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/danger/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/danger/surface"
+              }
+            },
+            {
+              "name": "semantic/status/danger/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/danger/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/info/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/info/surface"
+              }
+            },
+            {
+              "name": "semantic/status/info/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/info/onSurface"
+              }
+            },
+            {
+              "name": "component/button/primary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/primary/bg"
+              }
+            },
+            {
+              "name": "component/iconButton/borderWidth",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "component/segmentedControl/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/background/surface"
+              }
+            },
+            {
+              "name": "component/segmentedControl/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/border/subtle"
+              }
+            },
+            {
+              "name": "component/segmentedControl/option/active/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/selected/bg"
+              }
+            },
+            {
+              "name": "component/segmentedControl/option/active/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/selected/text"
+              }
+            },
+            {
+              "name": "component/segmentedControl/focus/ring",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/focus/ring"
+              }
+            },
+            {
+              "name": "component/iconButton/size/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 42
+            },
+            {
+              "name": "component/iconButton/iconSize/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "component/iconButton/default/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/background/surface"
+              }
+            },
+            {
+              "name": "component/iconButton/default/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "component/iconButton/default/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/icon/primary"
+              }
+            },
+            {
+              "name": "component/iconButton/badge/size",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "component/iconButton/badge/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "component/iconButton/badge/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/background/surface"
+              }
+            },
+            {
+              "name": "component/iconButton/focus/ring",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/focus/ring"
+              }
+            },
+            {
+              "name": "component/iconButton/tertiary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/tertiary/bg"
+              }
+            },
+            {
+              "name": "component/iconButton/tertiary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/tertiary/border"
+              }
+            },
+            {
+              "name": "component/iconButton/tertiary/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/tertiary/text"
+              }
+            },
+            {
+              "name": "component/iconButton/primary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/primary/bg"
+              }
+            },
+            {
+              "name": "component/iconButton/primary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/primary/bg"
+              }
+            },
+            {
+              "name": "component/iconButton/primary/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/primary/text"
+              }
+            },
+            {
+              "name": "component/iconButton/secondary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/secondary/bg"
+              }
+            },
+            {
+              "name": "component/iconButton/secondary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/secondary/border"
+              }
+            },
+            {
+              "name": "component/iconButton/secondary/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/icon/primary"
+              }
+            },
+            {
+              "name": "component/button/primary/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/primary/text"
+              }
+            },
+            {
+              "name": "component/button/primary/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/button/primary/height",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "size/button/md"
+              }
+            },
+            {
+              "name": "component/button/primary/paddingX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "component/button/secondary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/secondary/bg"
+              }
+            },
+            {
+              "name": "component/button/secondary/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/secondary/text"
+              }
+            },
+            {
+              "name": "component/button/secondary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/secondary/border"
+              }
+            },
+            {
+              "name": "component/button/secondary/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/button/secondary/height",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "size/button/md"
+              }
+            },
+            {
+              "name": "component/chip/base/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/chip/base/paddingX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/3"
+              }
+            },
+            {
+              "name": "component/chip/base/paddingY",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/1"
+              }
+            },
+            {
+              "name": "component/chip/status/success/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/success/bg"
+              }
+            },
+            {
+              "name": "component/chip/status/success/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/success/text"
+              }
+            },
+            {
+              "name": "component/chip/status/warning/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/warning/bg"
+              }
+            },
+            {
+              "name": "component/chip/status/warning/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/warning/text"
+              }
+            },
+            {
+              "name": "component/chip/status/danger/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/danger/bg"
+              }
+            },
+            {
+              "name": "component/chip/status/danger/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/danger/text"
+              }
+            },
+            {
+              "name": "component/chip/status/info/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/info/bg"
+              }
+            },
+            {
+              "name": "component/chip/status/info/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/info/text"
+              }
+            },
+            {
+              "name": "component/chip/highlight/default/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "component/chip/highlight/default/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "component/nav/item/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/text/secondary"
+              }
+            },
+            {
+              "name": "component/nav/item/textActive",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/text/primary"
+              }
+            },
+            {
+              "name": "component/nav/item/bgActive",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/background/surfaceAlt"
+              }
+            },
+            {
+              "name": "component/card/default/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/md"
+              }
+            },
+            {
+              "name": "component/carousel/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/3"
+              }
+            },
+            {
+              "name": "component/carousel/padding",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "typography/fontFamily/primary",
+              "type": "string",
+              "isAlias": false,
+              "value": "Krub, system-ui, sans-serif"
+            },
+            {
+              "name": "typography/fontFamily/secondary",
+              "type": "string",
+              "isAlias": false,
+              "value": "Krub"
+            },
+            {
+              "name": "typography/heading/h1/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/2xl"
+              }
+            },
+            {
+              "name": "typography/heading/h1/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/2xl"
+              }
+            },
+            {
+              "name": "typography/heading/h1/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "SemiBold"
+            },
+            {
+              "name": "typography/heading/h2/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/xl"
+              }
+            },
+            {
+              "name": "typography/heading/h2/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/tight"
+              }
+            },
+            {
+              "name": "typography/heading/h2/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Light"
+            },
+            {
+              "name": "typography/heading/h3/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/lg"
+              }
+            },
+            {
+              "name": "typography/heading/h3/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/xl"
+              }
+            },
+            {
+              "name": "typography/heading/h3/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Light"
+            },
+            {
+              "name": "typography/body/lg/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/md"
+              }
+            },
+            {
+              "name": "typography/body/lg/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/lg"
+              }
+            },
+            {
+              "name": "typography/body/lg/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Regular"
+            },
+            {
+              "name": "typography/body/md/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/sm"
+              }
+            },
+            {
+              "name": "typography/body/md/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/md"
+              }
+            },
+            {
+              "name": "typography/body/md/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Regular"
+            },
+            {
+              "name": "typography/body/sm-regular/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/xs"
+              }
+            },
+            {
+              "name": "typography/body/sm-regular/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/xs"
+              }
+            },
+            {
+              "name": "typography/body/sm-regular/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Regular"
+            },
+            {
+              "name": "typography/label/md/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/sm"
+              }
+            },
+            {
+              "name": "typography/label/md/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/sm"
+              }
+            },
+            {
+              "name": "typography/label/md/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Medium"
+            },
+            {
+              "name": "typography/label/sm-semibold/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/xs"
+              }
+            },
+            {
+              "name": "typography/label/sm-semibold/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/lg"
+              }
+            },
+            {
+              "name": "typography/label/sm-semibold/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "SemiBold"
+            },
+            {
+              "name": "typography/caption/sm/fontSize/raw",
+              "type": "number",
+              "isAlias": false,
+              "value": 10
+            },
+            {
+              "name": "typography/caption/sm/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "fontSize/2xs"
+              }
+            },
+            {
+              "name": "typography/caption/sm/lineHeight/raw",
+              "type": "number",
+              "isAlias": false,
+              "value": 15
+            },
+            {
+              "name": "typography/caption/sm/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "lineHeight/2xs"
+              }
+            },
+            {
+              "name": "typography/caption/sm/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Regular"
+            },
+            {
+              "name": "layout/screen/paddingX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "layout/screen/paddingTop",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "layout/section/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/8"
+              }
+            },
+            {
+              "name": "layout/cardGroup/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "layout/breakpoint/base",
+              "type": "string",
+              "isAlias": false,
+              "value": "0"
+            },
+            {
+              "name": "layout/breakpoint/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 640
+            },
+            {
+              "name": "layout/breakpoint/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 768
+            },
+            {
+              "name": "layout/breakpoint/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 1024
+            },
+            {
+              "name": "layout/breakpoint/xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 1280
+            },
+            {
+              "name": "layout/container/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 640
+            },
+            {
+              "name": "layout/container/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 768
+            },
+            {
+              "name": "layout/container/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 1024
+            },
+            {
+              "name": "layout/grid/mobile/columns",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "layout/grid/mobile/gutter",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "layout/grid/mobile/margin",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "layout/grid/tablet/columns",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "layout/grid/tablet/gutter",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "layout/grid/tablet/margin",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/6"
+              }
+            },
+            {
+              "name": "layout/grid/desktop/columns",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "layout/grid/desktop/gutter",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/6"
+              }
+            },
+            {
+              "name": "layout/grid/desktop/margin",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/8"
+              }
+            },
+            {
+              "name": "fontSize/2xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 10
+            },
+            {
+              "name": "lineHeight/2xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 15
+            },
+            {
+              "name": "color/warning/surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFF8E6"
+            },
+            {
+              "name": "color/warning/onSurface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#8B5A00"
+            },
+            {
+              "name": "color/promo/surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E8F6EE"
+            },
+            {
+              "name": "color/promo/onSurface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#005840"
+            },
+            {
+              "name": "color/success/onSurface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0F5132"
+            },
+            {
+              "name": "semantic/action/primary/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/1000"
+              }
+            },
+            {
+              "name": "semantic/action/outline/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/transparent"
+              }
+            },
+            {
+              "name": "semantic/action/outline/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "semantic/action/outline/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/1000"
+              }
+            },
+            {
+              "name": "semantic/action/outline/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/1000"
+              }
+            },
+            {
+              "name": "semantic/action/inverse/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/action/inverse/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/action/inverse/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/action/disabled/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/500"
+              }
+            },
+            {
+              "name": "semantic/action/link/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/action/link/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/segment/selected/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/segment/selected/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/segment/selected/iconAccent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/pink"
+              }
+            },
+            {
+              "name": "semantic/segment/unselected/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/segment/unselected/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "semantic/segment/unselected/iconMuted",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "semantic/segment/container/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "semantic/status/info/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/info/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/warning/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/warning/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/promo/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/promo/surface"
+              }
+            },
+            {
+              "name": "semantic/status/promo/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/promo/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/promo/title",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/promo/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/promo/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/promo/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/promo/link",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/promo/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/danger/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/danger/onSurface"
+              }
+            },
+            {
+              "name": "semantic/status/success/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/success/onSurface"
+              }
+            },
+            {
+              "name": "component/button/primary/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/primary/icon"
+              }
+            },
+            {
+              "name": "component/button/outline/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/outline/bg"
+              }
+            },
+            {
+              "name": "component/button/outline/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/outline/border"
+              }
+            },
+            {
+              "name": "component/button/outline/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/outline/text"
+              }
+            },
+            {
+              "name": "component/button/outline/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/outline/icon"
+              }
+            },
+            {
+              "name": "component/button/outline/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/button/inverse/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/inverse/bg"
+              }
+            },
+            {
+              "name": "component/button/inverse/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/inverse/text"
+              }
+            },
+            {
+              "name": "component/button/inverse/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/inverse/icon"
+              }
+            },
+            {
+              "name": "component/button/inverse/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/button/disabled/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/disabled/bg"
+              }
+            },
+            {
+              "name": "component/button/disabled/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/disabled/text"
+              }
+            },
+            {
+              "name": "component/button/disabled/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/disabled/icon"
+              }
+            },
+            {
+              "name": "component/button/disabled/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/button/link/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/link/text"
+              }
+            },
+            {
+              "name": "component/button/link/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/link/icon"
+              }
+            },
+            {
+              "name": "component/button/secondary/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/outline/icon"
+              }
+            },
+            {
+              "name": "component/banner/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/md"
+              }
+            },
+            {
+              "name": "component/banner/paddingX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "component/banner/paddingY",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/3"
+              }
+            },
+            {
+              "name": "component/banner/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/3"
+              }
+            },
+            {
+              "name": "component/banner/promo/title/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Bold"
+            },
+            {
+              "name": "component/banner/danger/text/fontWeight",
+              "type": "string",
+              "isAlias": false,
+              "value": "Bold"
+            },
+            {
+              "name": "component/banner/info/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/info/bg"
+              }
+            },
+            {
+              "name": "component/banner/info/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/info/text"
+              }
+            },
+            {
+              "name": "component/banner/info/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/info/icon"
+              }
+            },
+            {
+              "name": "component/banner/warning/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/warning/bg"
+              }
+            },
+            {
+              "name": "component/banner/warning/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/warning/text"
+              }
+            },
+            {
+              "name": "component/banner/warning/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/warning/icon"
+              }
+            },
+            {
+              "name": "component/banner/promo/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/promo/bg"
+              }
+            },
+            {
+              "name": "component/banner/promo/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/promo/text"
+              }
+            },
+            {
+              "name": "component/banner/promo/title",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/promo/title"
+              }
+            },
+            {
+              "name": "component/banner/promo/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/promo/icon"
+              }
+            },
+            {
+              "name": "component/banner/promo/link",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/promo/link"
+              }
+            },
+            {
+              "name": "component/banner/danger/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/danger/bg"
+              }
+            },
+            {
+              "name": "component/banner/danger/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/danger/text"
+              }
+            },
+            {
+              "name": "component/banner/danger/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/danger/icon"
+              }
+            },
+            {
+              "name": "semantic/action/marketing/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/social/whatsapp"
+              }
+            },
+            {
+              "name": "semantic/action/marketing/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/action/marketing/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "component/button/marketing/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/marketing/bg"
+              }
+            },
+            {
+              "name": "component/button/marketing/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/marketing/text"
+              }
+            },
+            {
+              "name": "component/button/marketing/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/marketing/icon"
+              }
+            },
+            {
+              "name": "component/button/marketing/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/button/marketing/height",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "size/button/md"
+              }
+            },
+            {
+              "name": "component/button/marketing/paddingX",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/4"
+              }
+            },
+            {
+              "name": "color/brand/green/accentDeep",
+              "type": "color",
+              "isAlias": false,
+              "value": "#005840"
+            },
+            {
+              "name": "color/brand/green/promoLime",
+              "type": "color",
+              "isAlias": false,
+              "value": "#A8DC18"
+            },
+            {
+              "name": "color/neutral/1000",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000"
+            },
+            {
+              "name": "color/brand/pink",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFB3D2"
+            },
+            {
+              "name": "color/brand/wine",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4E080C"
+            },
+            {
+              "name": "color/social/whatsapp",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1EAE54"
+            },
+            {
+              "name": "semantic/social/whatsapp/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/social/whatsapp"
+              }
+            },
+            {
+              "name": "semantic/social/whatsapp/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "component/fab/whatsapp/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/social/whatsapp/bg"
+              }
+            },
+            {
+              "name": "component/fab/whatsapp/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/social/whatsapp/icon"
+              }
+            },
+            {
+              "name": "color/rewards/highlight",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFB3D2"
+            },
+            {
+              "name": "semantic/rewards/highlight/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/rewards/highlight"
+              }
+            },
+            {
+              "name": "semantic/rewards/highlight/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/rewards/highlight"
+              }
+            },
+            {
+              "name": "semantic/rewards/highlight/icon",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/icon/primary"
+              }
+            },
+            {
+              "name": "semantic/rewards/highlight/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/text/primary"
+              }
+            },
+            {
+              "name": "component/avatar/size/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 36
+            },
+            {
+              "name": "component/avatar/user/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/background/surfaceAlt"
+              }
+            },
+            {
+              "name": "component/avatar/user/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/text/secondary"
+              }
+            },
+            {
+              "name": "component/avatar/user/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/border/subtle"
+              }
+            },
+            {
+              "name": "color/focus/ring",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1A73E8"
+            },
+            {
+              "name": "semantic/focus/ring",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/focus/ring"
+              }
+            },
+            {
+              "name": "semantic/focus/ringWidth",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "component/avatar/focus/ring",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/focus/ring"
+              }
+            },
+            {
+              "name": "semantic/action/selected/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/action/selected/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "component/button/focus/ring",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/focus/ring"
+              }
+            },
+            {
+              "name": "semantic/action/tertiary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "semantic/action/tertiary/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "semantic/action/tertiary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/brand/wine"
+              }
+            },
+            {
+              "name": "component/button/tertiary/bg",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/tertiary/bg"
+              }
+            },
+            {
+              "name": "component/button/tertiary/text",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/tertiary/text"
+              }
+            },
+            {
+              "name": "component/button/tertiary/border",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/action/tertiary/border"
+              }
+            },
+            {
+              "name": "component/button/link/fontSize",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "typography/button/link/fontSize"
+              }
+            },
+            {
+              "name": "component/button/link/lineHeight",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "typography/button/link/lineHeight"
+              }
+            },
+            {
+              "name": "semantic/focus/ringOffset",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "typography/display/fontSize",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "typography/display/lineHeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "typography/display/fontWeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 700
+            },
+            {
+              "name": "typography/display/letterSpacing",
+              "type": "number",
+              "isAlias": false,
+              "value": -0.800000011920929
+            },
+            {
+              "name": "typography/overline/sm/fontSize",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "typography/overline/sm/lineHeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "typography/overline/sm/fontWeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 500
+            },
+            {
+              "name": "typography/overline/sm/letterSpacing",
+              "type": "number",
+              "isAlias": false,
+              "value": 0.9599999785423279
+            },
+            {
+              "name": "component/doubleRewardCard/promoPanel/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "component/card/default/radius"
+              }
+            },
+            {
+              "name": "component/doubleRewardCard/rewardBadge/radius",
+              "type": "number",
+              "isAlias": false,
+              "value": 22
+            },
+            {
+              "name": "component/doubleRewardCard/codePill/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/doubleRewardCard/promoPanel/paddingY",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "component/doubleRewardCard/promoPanel/paddingRight",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "component/doubleRewardCard/referralStack/gap",
+              "type": "number",
+              "isAlias": false,
+              "value": 9
+            },
+            {
+              "name": "component/doubleRewardCard/balance/paddingBottomMultiple",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "component/doubleRewardCard/amountEmpty/fontSize",
+              "type": "number",
+              "isAlias": false,
+              "value": 38
+            },
+            {
+              "name": "component/doubleRewardCard/amountEmpty/lineHeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 46
+            },
+            {
+              "name": "component/doubleRewardCard/balanceLabel/lineHeightCompact",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "component/doubleRewardCard/promoTitle/fontSize",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "component/doubleRewardCard/promoTitle/lineHeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "component/doubleRewardCard/referralCode/lineHeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "component/doubleRewardCard/componentSet/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "component/card/default/radius"
+              }
+            },
+            {
+              "name": "component/doubleRewardCard/gift/smallBoxRadius",
+              "type": "number",
+              "isAlias": false,
+              "value": 2.71875
+            },
+            {
+              "name": "component/doubleRewardCard/gift/smallLidRadius",
+              "type": "number",
+              "isAlias": false,
+              "value": 2.265625
+            },
+            {
+              "name": "component/doubleRewardCard/gift/smallRibbonRadius",
+              "type": "number",
+              "isAlias": false,
+              "value": 0.90625
+            },
+            {
+              "name": "component/doubleRewardCard/gift/boxRadius",
+              "type": "number",
+              "isAlias": false,
+              "value": 4.875
+            },
+            {
+              "name": "component/doubleRewardCard/gift/lidRadius",
+              "type": "number",
+              "isAlias": false,
+              "value": 4.0625
+            },
+            {
+              "name": "component/doubleRewardCard/gift/ribbonRadius",
+              "type": "number",
+              "isAlias": false,
+              "value": 1.625
+            },
+            {
+              "name": "component/doubleRewardCard/copyIcon/radius",
+              "type": "number",
+              "isAlias": false,
+              "value": 3
+            },
+            {
+              "name": "component/doubleRewardCard/balance/paddingTop",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "component/doubleRewardCard/balance/paddingBottom",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "color/danger/progress",
+              "type": "color",
+              "isAlias": false,
+              "value": "#7A0B13"
+            },
+            {
+              "name": "semantic/status/danger/progress",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/danger/progress"
+              }
+            },
+            {
+              "name": "component/actionList/reimbursement/paddingY",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/2"
+              }
+            },
+            {
+              "name": "component/actionList/progress/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/1"
+              }
+            },
+            {
+              "name": "component/actionList/progress/height",
+              "type": "number",
+              "isAlias": false,
+              "value": 6
+            },
+            {
+              "name": "component/actionList/progress/marginTop",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/2"
+              }
+            },
+            {
+              "name": "component/actionList/progress/radius",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "radius/full"
+              }
+            },
+            {
+              "name": "component/actionList/progress/track",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/border/subtle"
+              }
+            },
+            {
+              "name": "component/actionList/progress/blocked",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "semantic/status/danger/progress"
+              }
+            },
+            {
+              "name": "component/actionList/progress/reviewing",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/info/onSurface"
+              }
+            },
+            {
+              "name": "component/actionList/progress/processing",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/info/onSurface"
+              }
+            },
+            {
+              "name": "component/actionList/progress/paid",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "color/success/onSurface"
+              }
+            },
+            {
+              "name": "component/actionList/content/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/1"
+              }
+            },
+            {
+              "name": "component/actionList/card/borderWidth",
+              "type": "number",
+              "isAlias": false,
+              "value": 1
+            },
+            {
+              "name": "component/actionList/divider/height",
+              "type": "number",
+              "isAlias": false,
+              "value": 1
+            },
+            {
+              "name": "layout/icon/size/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 38
+            },
+            {
+              "name": "component/actionList/row/minHeight",
+              "type": "number",
+              "isAlias": false,
+              "value": 96
+            },
+            {
+              "name": "component/actionList/progress/marginBottom",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "component/actionList/reimbursement/paddingTop",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/2"
+              }
+            },
+            {
+              "name": "component/actionList/reimbursement/paddingBottom",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Musky — UI Tokens",
+                "name": "spacing/3"
+              }
+            },
+            {
+              "name": "layout/icon/size/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "layout/icon/size/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "layout/container/insetDense",
+              "type": "number",
+              "isAlias": false,
+              "value": 10
+            },
+            {
+              "name": "layout/carousel/slideWidth/sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 220
+            },
+            {
+              "name": "layout/carousel/slideWidth/md",
+              "type": "number",
+              "isAlias": false,
+              "value": 302
+            },
+            {
+              "name": "layout/carousel/slideWidth/lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 336
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "Musky/Typography/Display",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 40,
+                "fontFamily": "Krub",
+                "fontWeight": "Bold",
+                "lineHeight": 48,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": -0.800000011920929,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/H1",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 32,
+                "fontFamily": "Krub",
+                "fontWeight": "Bold",
+                "lineHeight": 40,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": -0.47999998927116394,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/H2",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Krub",
+                "fontWeight": "SemiBold",
+                "lineHeight": 32,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/H3",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 20,
+                "fontFamily": "Krub",
+                "fontWeight": "SemiBold",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Body Large",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Krub",
+                "fontWeight": "Regular",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Body",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Krub",
+                "fontWeight": "Regular",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Body Small Semibold",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Krub",
+                "fontWeight": "SemiBold",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Body Small Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Krub",
+                "fontWeight": "Regular",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Body Link",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Krub",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "UNDERLINE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Label",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Krub",
+                "fontWeight": "Medium",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Label Small",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Krub",
+                "fontWeight": "Medium",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Caption",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 12,
+                "fontFamily": "Krub",
+                "fontWeight": "Regular",
+                "lineHeight": 16,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Overline",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 12,
+                "fontFamily": "Krub",
+                "fontWeight": "Medium",
+                "lineHeight": 16,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0.9599999785423279,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Musky/Typography/Emoji Small",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Krub",
+                "fontWeight": "SemiBold",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Effects",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "Shadow 1",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.05
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "radius": 8,
+                    "spread": 0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

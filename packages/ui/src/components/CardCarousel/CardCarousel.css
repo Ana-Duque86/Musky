@@ -1,0 +1,156 @@
+@import "../../styles/tokens.css";
+
+.musky-card-carousel {
+  box-sizing: border-box;
+  display: grid;
+  font-family: var(--typography-body-font-family);
+  gap: var(--space-2);
+  max-width: none;
+  min-width: 0;
+  overflow: visible;
+  width: 100%;
+}
+
+.musky-card-carousel__header {
+  align-items: center;
+  display: flex;
+  gap: var(--space-2);
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.musky-card-carousel__heading {
+  display: grid;
+  flex: 1 1 auto;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.musky-card-carousel__title {
+  color: var(--semantic-text-primary);
+  flex: 1 1 auto;
+  font-family: var(--typography-h3-font-family);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-h3-font-weight);
+  letter-spacing: var(--typography-h3-letter-spacing);
+  line-height: var(--typography-h3-line-height);
+  margin: 0;
+  min-width: 0;
+}
+
+.musky-card-carousel__description {
+  color: var(--semantic-text-secondary);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  letter-spacing: var(--typography-body-small-letter-spacing);
+  line-height: var(--typography-body-small-line-height);
+  margin: 0;
+}
+
+.musky-card-carousel__track {
+  align-items: stretch;
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--space-4);
+  grid-auto-columns: var(--layout-carousel-slide-md);
+  grid-auto-flow: column;
+  margin-inline-end: calc(-1 * (var(--layout-screen-padding-x) + var(--layout-carousel-peek-outset)));
+  margin-inline-start: 0;
+  max-width: none;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding-block: var(--space-2);
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+  scrollbar-width: none;
+  width: calc(100% + var(--layout-screen-padding-x) + var(--layout-carousel-peek-outset));
+}
+
+.musky-card-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.musky-card-carousel--snap .musky-card-carousel__track {
+  scroll-snap-type: inline mandatory;
+}
+
+.musky-card-carousel--free .musky-card-carousel__track {
+  scroll-snap-type: none;
+}
+
+.musky-card-carousel__item {
+  align-self: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: 0;
+  min-width: var(--layout-carousel-slide-md);
+  scroll-snap-align: start;
+  width: var(--layout-carousel-slide-md);
+}
+
+.musky-card-carousel--sm .musky-card-carousel__item {
+  min-width: var(--layout-carousel-slide-sm);
+  width: var(--layout-carousel-slide-sm);
+}
+
+.musky-card-carousel--lg .musky-card-carousel__item {
+  min-width: var(--layout-carousel-slide-lg);
+  width: var(--layout-carousel-slide-lg);
+}
+
+.musky-card-carousel__item > .musky-card {
+  flex: 1 1 auto;
+  min-height: 100%;
+}
+
+.musky-card-carousel__item > .musky-card.musky-card--vertical {
+  grid-template-rows: auto 1fr;
+}
+
+.musky-card-carousel__item > .musky-card.musky-card--vertical .musky-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: var(--space-2);
+  min-height: 0;
+}
+
+.musky-card-carousel__item > .musky-card.musky-card--vertical .musky-card__footer {
+  margin-top: auto;
+}
+
+.musky-card-carousel--sm .musky-card-carousel__track {
+  grid-auto-columns: var(--layout-carousel-slide-sm);
+}
+
+.musky-card-carousel--lg .musky-card-carousel__track {
+  grid-auto-columns: var(--layout-carousel-slide-lg);
+}
+
+.musky-card-carousel__item > .musky-card.musky-card--horizontal {
+  align-items: stretch;
+  min-height: 100%;
+}
+
+.musky-card-carousel:not(.musky-card-carousel--peek) .musky-card-carousel__item {
+  min-width: 0;
+  width: auto;
+}
+
+.musky-card-carousel:not(.musky-card-carousel--peek) .musky-card-carousel__track {
+  grid-auto-columns: minmax(0, 100%);
+  margin-inline-end: 0;
+  width: 100%;
+}
+
+.musky-card-carousel--single {
+  max-width: var(--layout-carousel-slide-lg);
+}
+
+.musky-card-carousel__header-action.musky-button {
+  flex-shrink: 0;
+  min-width: max-content;
+}

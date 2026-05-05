@@ -1,0 +1,37 @@
+@import "../../styles/tokens.css";
+
+.musky-avatar {
+  align-items: center;
+  background: var(--component-avatar-user-bg);
+  border: 1px solid var(--component-avatar-user-border);
+  border-radius: var(--radius-full);
+  box-sizing: border-box;
+  color: var(--component-avatar-user-text);
+  display: inline-flex;
+  flex: 0 0 var(--component-avatar-size-md);
+  font-family: var(--typography-label-small-font-family);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-label-small-font-weight);
+  height: var(--component-avatar-size-md);
+  justify-content: center;
+  line-height: var(--typography-label-small-line-height);
+  overflow: hidden;
+  padding: 0;
+  width: var(--component-avatar-size-md);
+}
+
+button.musky-avatar {
+  cursor: pointer;
+}
+
+.musky-avatar:focus-visible {
+  outline: var(--semantic-focus-ring-width) solid var(--component-avatar-focus-ring);
+  outline-offset: 2px;
+}
+
+.musky-avatar__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}

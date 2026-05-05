@@ -1,0 +1,132 @@
+@import "../../styles/tokens.css";
+
+.musky-button {
+  align-items: center;
+  border-radius: var(--component-button-radius);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--typography-label-font-family);
+  font-size: var(--typography-label-font-size);
+  font-weight: var(--typography-label-font-weight);
+  gap: var(--component-button-gap);
+  justify-content: center;
+  letter-spacing: var(--typography-label-letter-spacing);
+  line-height: var(--typography-label-line-height);
+  min-width: 0;
+  padding: 0 var(--component-button-padding-x-md);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    opacity 160ms ease;
+}
+
+.musky-button--sm {
+  font-size: var(--typography-label-small-font-size);
+  height: var(--component-button-height-sm);
+  line-height: var(--typography-label-small-line-height);
+  padding-inline: var(--component-button-padding-x-sm);
+}
+
+.musky-button--md {
+  height: var(--component-button-height-md);
+}
+
+.musky-button--lg {
+  height: var(--component-button-height-lg);
+  padding-inline: var(--component-button-padding-x-lg);
+}
+
+.musky-button--full-width {
+  width: 100%;
+}
+
+.musky-button--primary {
+  background: var(--component-button-primary-bg);
+  border: var(--component-button-border-width) solid var(--component-button-primary-bg);
+  color: var(--component-button-primary-text);
+}
+
+.musky-button--secondary {
+  background: var(--component-button-secondary-bg);
+  border: var(--component-button-secondary-border-width) solid var(--component-button-secondary-border);
+  color: var(--component-button-secondary-text);
+}
+
+.musky-button--tertiary {
+  background: var(--component-button-tertiary-bg);
+  border: var(--component-button-border-width) solid var(--component-button-tertiary-border);
+  color: var(--component-button-tertiary-text);
+}
+
+.musky-button--link {
+  background: transparent;
+  border: 0;
+  color: var(--component-button-link-text);
+  font-family: var(--typography-link-font-family);
+  font-size: var(--typography-link-font-size);
+  font-weight: var(--typography-font-weight-bold);
+  height: auto;
+  letter-spacing: var(--typography-link-letter-spacing);
+  line-height: var(--typography-link-line-height);
+  min-height: 32px;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.musky-button:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.musky-button:active:not(:disabled) {
+  opacity: 0.78;
+}
+
+.musky-button:disabled {
+  background: var(--component-button-disabled-bg);
+  border-color: var(--component-button-disabled-bg);
+  color: var(--component-button-disabled-text);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.musky-button--link:disabled {
+  background: transparent;
+}
+
+.musky-button:focus-visible {
+  outline: var(--semantic-focus-ring-width) solid var(--component-button-focus-ring);
+  outline-offset: var(--component-button-focus-ring-offset);
+}
+
+.musky-button__icon,
+.musky-button__spinner {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.musky-button__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.musky-button__spinner {
+  animation: musky-button-spin 900ms linear infinite;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-full);
+}
+
+@keyframes musky-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "component": {
+    "name": "IconButton",
+    "category": "action",
+    "description": "Circular icon-only action button with the same visual hierarchy as Button: primary, secondary, and tertiary.",
+    "type": "interactive"
+  },
+  "usage": {
+    "useCases": ["notifications-action", "rewards-action", "compact-icon-action"],
+    "requiredProps": ["label", "icon"],
+    "antiPatterns": [
+      {
+        "scenario": "Creating separate notification components for badge on/off",
+        "reason": "Badge is a boolean property of the same IconButton.",
+        "alternative": "Use IconButton with badge=true or badge=false."
+      }
+    ]
+  },
+  "variants": {
+    "variant": ["primary", "secondary", "tertiary"],
+    "badge": [true, false],
+    "icon": "replaceable slot"
+  },
+  "layout": {
+    "badge": {
+      "position": "ABSOLUTE",
+      "horizontal": "MAX",
+      "vertical": "MIN",
+      "end": 8,
+      "top": 8
+    }
+  },
+  "tokens": [
+    "component/iconButton/size/md",
+    "component/iconButton/iconSize/md",
+    "component/iconButton/primary/bg",
+    "component/iconButton/primary/border",
+    "component/iconButton/primary/icon",
+    "component/iconButton/secondary/bg",
+    "component/iconButton/secondary/border",
+    "component/iconButton/secondary/icon",
+    "component/iconButton/tertiary/bg",
+    "component/iconButton/tertiary/border",
+    "component/iconButton/tertiary/icon",
+    "component/iconButton/badge/bg",
+    "component/iconButton/badge/border",
+    "component/iconButton/focus/ring"
+  ],
+  "accessibility": {
+    "role": "button",
+    "keyboardSupport": "Native button.",
+    "screenReader": "Icon-only buttons require aria-label. Badge is decorative and should be announced in the label when needed.",
+    "focusManagement": "Uses component/iconButton/focus/ring.",
+    "wcag": "AA"
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["icon button", "notifications", "rewards", "badge", "action"],
+    "context": "Use as an independent component. Header must compose IconButton instances."
+  }
+}

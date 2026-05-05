@@ -1,0 +1,45 @@
+generated: "2026-05-03T01:01:47.829861+00:00"
+dataSources:
+  api:
+    queries:
+      query_0:
+        files[1]: node_modules/storybook/dist/preview/runtime.js
+        query: /index.json
+        purpose: Data fetching
+      query_1:
+        files[1]: node_modules/lru-cache/dist/esm/index.d.ts
+        query: "https://example.com/"
+        purpose: Data fetching
+      query_2:
+        files[1]: node_modules/lru-cache/dist/esm/index.d.ts
+        query: key
+        purpose: Data fetching
+      query_3:
+        files[1]: node_modules/lru-cache/dist/esm/browser/index.d.ts
+        query: "https://example.com/"
+        purpose: Data fetching
+      query_4:
+        files[1]: node_modules/lru-cache/dist/esm/browser/index.d.ts
+        query: key
+        purpose: Data fetching
+      query_5:
+        files[1]: node_modules/lru-cache/dist/esm/node/index.d.ts
+        query: "https://example.com/"
+        purpose: Data fetching
+      query_6:
+        files[1]: node_modules/lru-cache/dist/esm/node/index.d.ts
+        query: key
+        purpose: Data fetching
+      query_7:
+        files[1]: node_modules/lru-cache/dist/commonjs/index.d.ts
+        query: "https://example.com/"
+        purpose: Data fetching
+      query_8:
+        files[1]: node_modules/lru-cache/dist/commonjs/index.d.ts
+        query: key
+        purpose: Data fetching
+      query_9:
+        files[1]: node_modules/.cache/storybook/10.3.6/dbce370936e6e11839264a8996030eac3bf137c3dc1a264c8ebe819ef78b6fc0/sb-vite/deps/storybook_internal_preview_runtime.js
+        query: /index.json
+        purpose: Data fetching
+staticPaths:

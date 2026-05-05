@@ -1,0 +1,116 @@
+@import "../../styles/tokens.css";
+
+.musky-content-module {
+  --typography-link-font-size: 14px;
+  --typography-link-line-height: 18px;
+  box-sizing: border-box;
+  display: grid;
+  font-family: var(--typography-body-font-family);
+  gap: var(--space-4);
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: visible;
+  width: 100%;
+}
+
+.musky-content-module__title {
+  color: var(--semantic-text-primary);
+  font-family: var(--typography-h3-font-family);
+  font-size: var(--typography-h3-font-size);
+  font-weight: var(--typography-h3-font-weight);
+  letter-spacing: var(--typography-h3-letter-spacing);
+  line-height: var(--typography-h3-line-height);
+  margin: 0;
+  min-width: 0;
+}
+
+.musky-content-module__filter-scroll {
+  /* Igual que el rail del carrusel: desborda el padding horizontal del padre para que el scroll llegue al borde. */
+  box-sizing: border-box;
+  margin-inline-end: calc(-1 * var(--layout-screen-padding-x));
+  max-width: none;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding-block: var(--space-1);
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+  scrollbar-width: none;
+  width: calc(100% + var(--layout-screen-padding-x));
+}
+
+.musky-content-module__filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.musky-content-module__filter-group {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: var(--space-2);
+  min-width: min-content;
+}
+
+.musky-content-module__filter-chip {
+  align-items: center;
+  background: var(--semantic-background-surface);
+  border: var(--border-width-default) solid var(--semantic-border-subtle);
+  border-radius: var(--radius-full);
+  box-sizing: border-box;
+  color: var(--semantic-text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-family: var(--typography-label-small-font-family);
+  font-size: var(--typography-label-small-font-size);
+  font-weight: var(--typography-label-small-font-weight);
+  height: 40px;
+  justify-content: center;
+  letter-spacing: var(--typography-label-small-letter-spacing);
+  line-height: var(--typography-label-small-line-height);
+  margin-block: var(--space-2);
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  white-space: nowrap;
+}
+
+.musky-content-module__filter-chip[data-active="true"] {
+  background: var(--semantic-action-selected-bg);
+  border-color: transparent;
+  color: var(--semantic-action-selected-text);
+}
+
+.musky-content-module__filter-chip:disabled {
+  cursor: not-allowed;
+  opacity: var(--semantic-state-disabled-opacity);
+}
+
+.musky-content-module__filter-chip:focus-visible {
+  outline: var(--semantic-focus-ring-width) solid var(--semantic-focus-ring);
+  outline-offset: var(--semantic-focus-ring-offset);
+}
+
+.musky-content-module__empty {
+  color: var(--semantic-text-secondary);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  line-height: var(--typography-body-small-line-height);
+  margin: 0;
+}
+
+.musky-content-module__carousel.musky-card-carousel {
+  gap: var(--space-4);
+}
+
+.musky-content-module--loading {
+  opacity: var(--semantic-state-loading-opacity);
+  pointer-events: none;
+}
+
+/* Editorial cards: clamp description to two lines inside this module. */
+.musky-content-module .musky-card__description {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

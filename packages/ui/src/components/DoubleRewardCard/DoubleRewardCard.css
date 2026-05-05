@@ -1,0 +1,263 @@
+@import "../../styles/tokens.css";
+
+.musky-double-reward-card {
+  background: var(--semantic-background-surface);
+  border: var(--border-width-default) solid var(--semantic-border-subtle);
+  border-radius: var(--component-double-reward-card-radius);
+  box-sizing: border-box;
+  color: var(--semantic-text-primary);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--typography-body-font-family);
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.musky-double-reward-card__balance {
+  background: var(--semantic-background-surface);
+  display: grid;
+  gap: var(--component-double-reward-card-balance-gap);
+  padding: var(--component-double-reward-card-balance-padding-top)
+    var(--component-double-reward-card-balance-padding-x)
+    var(--component-double-reward-card-balance-padding-bottom);
+}
+
+.musky-double-reward-card--multiple .musky-double-reward-card__balance {
+  padding-bottom: var(--component-double-reward-card-balance-padding-bottom-multiple);
+}
+
+.musky-double-reward-card__balance-header {
+  align-items: center;
+  display: flex;
+  gap: var(--component-double-reward-card-balance-header-gap);
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.musky-double-reward-card__amount {
+  color: var(--semantic-text-primary);
+  font-size: var(--typography-display-font-size);
+  font-weight: var(--typography-font-weight-bold);
+  letter-spacing: var(--typography-display-letter-spacing);
+  line-height: var(--typography-display-line-height);
+}
+
+.musky-double-reward-card--empty .musky-double-reward-card__amount {
+  font-size: var(--component-double-reward-card-amount-empty-font-size);
+  line-height: var(--component-double-reward-card-amount-empty-line-height);
+}
+
+.musky-double-reward-card__badge {
+  align-items: center;
+  background: transparent;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  flex: 0 0 var(--component-double-reward-card-reward-badge-size);
+  height: var(--component-double-reward-card-reward-badge-size);
+  justify-content: center;
+  width: var(--component-double-reward-card-reward-badge-size);
+}
+
+.musky-double-reward-card__label {
+  color: var(--semantic-text-primary);
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: var(--typography-body-line-height);
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.musky-double-reward-card__breakdown {
+  color: var(--semantic-text-secondary);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  letter-spacing: var(--typography-body-small-letter-spacing);
+  line-height: var(--typography-body-small-line-height);
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.musky-double-reward-card__promo {
+  align-items: center;
+  background: var(--color-brand-green-accent-deep);
+  border-radius: var(--component-double-reward-card-promo-panel-radius);
+  box-sizing: border-box;
+  color: var(--semantic-text-inverse);
+  display: flex;
+  gap: var(--component-double-reward-card-promo-panel-row-gap);
+  overflow: hidden;
+  padding: var(--component-double-reward-card-promo-panel-padding-y)
+    var(--component-double-reward-card-promo-panel-padding-right)
+    var(--component-double-reward-card-promo-panel-padding-y)
+    var(--component-double-reward-card-promo-panel-padding-x);
+  position: relative;
+}
+
+.musky-double-reward-card__decor {
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  position: absolute;
+}
+
+.musky-double-reward-card__decor--glow {
+  background: var(--color-brand-green-promo-lime);
+  height: 142px;
+  left: -54px;
+  opacity: var(--component-double-reward-card-promo-lime-opacity);
+  top: 44px;
+  width: 142px;
+}
+
+.musky-double-reward-card__decor--wave {
+  background: var(--color-chartreuse-green-48);
+  height: 176px;
+  opacity: var(--component-double-reward-card-promo-lime-opacity);
+  right: -48px;
+  top: -54px;
+  width: 226px;
+}
+
+.musky-double-reward-card__gift {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 var(--component-double-reward-card-gift-column-width);
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.musky-double-reward-card__promo-content {
+  display: grid;
+  flex: 1 1 auto;
+  gap: var(--component-double-reward-card-referral-stack-gap);
+  min-width: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.musky-double-reward-card__promo-title {
+  color: var(--semantic-text-inverse);
+  font-size: var(--component-double-reward-card-promo-title-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: var(--component-double-reward-card-promo-title-line-height);
+  max-width: var(--component-double-reward-card-promo-content-text-max-width);
+}
+
+.musky-double-reward-card__promo-body {
+  color: var(--semantic-text-inverse);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: var(--typography-body-small-line-height);
+  max-width: var(--component-double-reward-card-promo-content-text-max-width);
+}
+
+.musky-double-reward-card__code-pill {
+  align-items: center;
+  background: var(--semantic-background-surface);
+  border-radius: var(--component-double-reward-card-code-pill-radius);
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--component-double-reward-card-code-pill-gap);
+  justify-content: space-between;
+  margin-top: var(--component-double-reward-card-code-pill-margin-top);
+  max-width: var(--component-double-reward-card-code-pill-max-width);
+  min-height: var(--component-double-reward-card-code-pill-min-height);
+  min-width: 0;
+  padding: var(--component-double-reward-card-code-pill-padding-y)
+    var(--component-double-reward-card-code-pill-padding-x);
+  width: 100%;
+}
+
+.musky-double-reward-card__code {
+  color: var(--semantic-text-primary);
+  flex: 1 1 auto;
+  font-family: var(--typography-body-font-family);
+  font-size: var(--typography-body-small-font-size);
+  line-height: var(--component-double-reward-card-referral-code-line-height);
+  min-width: 0;
+}
+
+.musky-double-reward-card__copy {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--color-brand-wine);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 24px;
+  height: 24px;
+  justify-content: center;
+  padding: 0;
+  width: 24px;
+}
+
+.musky-double-reward-card__copy:focus-visible {
+  border-radius: var(--radius-sm);
+  outline: var(--semantic-focus-ring-width) solid var(--semantic-focus-ring);
+  outline-offset: var(--semantic-focus-ring-offset);
+}
+
+.musky-double-reward-card__copy-icon {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.musky-double-reward-card__reward-svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.musky-double-reward-card__reward-svg--sm {
+  height: 40px;
+  width: 40px;
+}
+
+.musky-double-reward-card__reward-svg--lg {
+  height: 92px;
+  max-width: 100%;
+  width: 88px;
+}
+
+.musky-double-reward-card__copy-back,
+.musky-double-reward-card__copy-front {
+  background: currentColor;
+  border-radius: var(--component-double-reward-card-copy-icon-radius);
+  height: 12px;
+  position: absolute;
+  width: 10px;
+}
+
+.musky-double-reward-card__copy-back {
+  left: 8px;
+  opacity: 0.55;
+  top: 5px;
+}
+
+.musky-double-reward-card__copy-front {
+  left: 5px;
+  top: 8px;
+}
+
+@media (max-width: 340px) {
+  .musky-double-reward-card__promo {
+    padding-left: var(--component-double-reward-card-promo-panel-padding-x);
+    padding-right: var(--component-double-reward-card-promo-panel-padding-right);
+  }
+
+  .musky-double-reward-card__gift {
+    flex-basis: var(--component-double-reward-card-gift-column-width);
+  }
+
+  .musky-double-reward-card__promo-title,
+  .musky-double-reward-card__promo-body {
+    max-width: 160px;
+  }
+}

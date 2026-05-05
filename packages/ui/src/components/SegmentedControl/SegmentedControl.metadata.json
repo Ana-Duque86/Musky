@@ -1,0 +1,49 @@
+{
+  "component": {
+    "name": "SegmentedControl",
+    "category": "actions",
+    "description": "Single-selection action control for choosing between mutually exclusive options such as Perro/Gato.",
+    "type": "selection"
+  },
+  "usage": {
+    "useCases": ["pet-type-selection", "category-selection", "single-choice-toggle"],
+    "antiPatterns": [
+      {
+        "scenario": "Independent actions",
+        "reason": "Use Button or IconButton when the choices are not mutually exclusive."
+      }
+    ]
+  },
+  "variants": {
+    "selection": ["single"],
+    "active": [true, false],
+    "state": ["default", "disabled", "focus"]
+  },
+  "tokens": [
+    "semantic/segment/selected/bg",
+    "semantic/segment/selected/text",
+    "semantic/segment/unselected/bg",
+    "semantic/segment/unselected/text",
+    "semantic/segment/container/border",
+    "semantic/background/surfaceAlt",
+    "typography/label/md/fontSize",
+    "typography/label/md/lineHeight",
+    "typography/label/md/fontWeight",
+    "radius/full",
+    "component/segmentedControl/bg",
+    "component/segmentedControl/border",
+    "component/segmentedControl/option/active/bg",
+    "component/segmentedControl/option/active/text",
+    "component/segmentedControl/focus/ring"
+  ],
+  "accessibility": {
+    "role": "radiogroup",
+    "keyboardSupport": "Options use radio semantics. Arrow-key roving focus can be added when the group becomes more complex.",
+    "screenReader": "The radiogroup exposes its label first, then each option is read in DOM/visual order with aria-checked, aria-posinset, and aria-setsize.",
+    "focusManagement": "Each option has visible focus. Active state is not conveyed by color alone. For Perro/Gato the order is Perro first, then Gato.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": ["selection_value", "selection_options", "is_selected", "is_available"]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "component": {
+    "name": "Header",
+    "category": "app-shell",
+    "description": "Top app header with an always-visible user avatar, personalized greeting, notifications, and rewards entry points.",
+    "type": "navigation"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Header",
+    "referenceNode": "99:549",
+    "componentSet": "Header"
+  },
+  "usage": {
+    "useCases": [
+      "home-app-shell",
+      "authenticated-dashboard",
+      "user-context-entry"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "Checkout, onboarding, or modal critical flows",
+        "reason": "The header adds navigation exits and visual noise.",
+        "alternative": "Use a focused flow header or no header."
+      }
+    ],
+    "requiredProps": [],
+    "commonPatterns": [
+      {
+        "name": "default-home-header",
+        "description": "Greeting with rewards and notifications.",
+        "composition": "<Header user={user} notificationsCount={2} />"
+      }
+    ]
+  },
+  "composition": {
+    "nestedComponents": ["Avatar", "Icon", "IconButton"],
+    "rules": [
+      "Header must compose Avatar and IconButton instances instead of drawing their internals.",
+      "Header exposes only semantic tokens and layout primitives; child component tokens belong to Avatar and IconButton metadata.",
+      "Default notifications: Icon `notifications` (tone secondary); unread state uses **IconButton `badge`** (brand pink via `component/iconButton/badge/*`), separate from the glyph.",
+      "Default header icons (`present`, `notifications`, `notificationsBadge`) use Icon **tone secondary**; pass custom nodes via `rewardsIcon` / `notificationIcon` to override.",
+      "Avatar/User is always visible in the Header MVP.",
+      "Greeting text uses Label typography: regular for ¡Hola and bold for the display name (see docs/components/header.md and docs/foundations/figma-musky-contract.md)."
+    ]
+  },
+  "data": {
+    "source": "supabase",
+    "fields": [
+      "user_name",
+      "user_avatar",
+      "notifications_count",
+      "notifications_type",
+      "rewards_status",
+      "rewards_points"
+    ],
+    "fallbacks": {
+      "user_name": "¡Hola!",
+      "user_avatar": "initials",
+      "notifications_count": 0,
+      "rewards_status": "inactive"
+    }
+  },
+  "variants": {
+    "avatar": ["user"],
+    "notificationsBadge": [true, false],
+    "rewards": ["hidden", "visible"],
+    "theme": ["light"]
+  },
+  "layout": {
+    "height": "59px",
+    "paddingX": "space-4",
+    "paddingY": "space-2",
+    "gap": "space-3"
+  },
+  "tokens": [
+    "semantic/background/app",
+    "semantic/text/primary",
+    "semantic/focus/ring",
+    "typography/label/md/fontSize",
+    "typography/label/md/lineHeight",
+    "typography/label/sm/fontSize",
+    "space-2",
+    "space-3",
+    "space-4"
+  ],
+  "accessibility": {
+    "role": "banner",
+    "keyboardSupport": "Avatar and icon actions are native buttons when interactive.",
+    "screenReader": "Icon-only buttons require aria-label. Notification count is announced in the notification button label.",
+    "focusManagement": "Focus order is Avatar/User, Rewards, Notifications. Header references semantic/focus/ring; Avatar and IconButton manage their own component-level focus aliases. The badge does not receive focus.",
+    "wcag": "AA"
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["header", "app shell", "greeting", "notifications", "rewards", "avatar"],
+    "context": "Use at the top of authenticated app screens. Do not use in focused full-screen flows."
+  }
+}

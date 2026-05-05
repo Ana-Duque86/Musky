@@ -1,0 +1,97 @@
+{
+  "component": {
+    "name": "ContentModule",
+    "category": "content",
+    "description": "Discovery module: optional section title, horizontal filter chips (radiogroup), and a CardCarousel of editorial content cards with category overline rules.",
+    "type": "module"
+  },
+  "figma": {
+    "file": "",
+    "page": "Home / Content",
+    "componentSet": "Content Carousel Module"
+  },
+  "usage": {
+    "useCases": ["latest-news", "editorial-tips", "personalized-feed"],
+    "antiPatterns": [
+      {
+        "scenario": "Critical or mandatory tasks",
+        "reason": "Horizontal exploration hides items and reduces scan speed.",
+        "alternative": "ActionList or vertical list"
+      },
+      {
+        "scenario": "Single static article",
+        "reason": "Carousel chrome is unnecessary.",
+        "alternative": "Card or Banner"
+      }
+    ],
+    "contentRules": [
+      "Parent owns filtering and personalization: pass `articles` already filtered for `filterValue`.",
+      "When `filterValue` equals `allFilterValue`, show `contentCategoryLabel` on each card; when a specific category is selected, omit labels to avoid redundancy.",
+      "Hide the entire module when there is no content to show (parent decision); empty filtered state shows `emptyStateLabel` inside the module.",
+      "Use `linkLabel` for the inline reinforcement string (default Leer artículo); the whole card is the primary navigation target when `href` is set."
+    ]
+  },
+  "composition": {
+    "nestedComponents": ["Card", "CardCarousel", "Chip pattern (filter chips are module-local radiogroup styling)"],
+    "rules": [
+      "Filter strip uses disconnected pill buttons in a horizontal scroller; it is not the connected SegmentedControl bar.",
+      "Cards use `elevation=none` for editorial rail parity with reference layouts.",
+      "Description text is clamped to two lines via `.musky-content-module` scope."
+    ]
+  },
+  "variants": {
+    "hasHeader": [true, false],
+    "hasFilters": [true, false],
+    "scrollType": ["snap", "free"],
+    "cardSize": ["sm", "md", "lg"]
+  },
+  "layout": {
+    "zones": ["title", "filter-scroll", "carousel-or-empty"],
+    "behavior": "Title is static; filters scroll horizontally; carousel reuses CardCarousel track behavior."
+  },
+  "tokens": [
+    "semantic/text/primary",
+    "semantic/text/secondary",
+    "semantic/action/selectedBg",
+    "semantic/action/selectedText",
+    "semantic/focus/ring",
+    "semantic/state/disabledOpacity",
+    "semantic/state/loadingOpacity",
+    "space/1",
+    "space/2",
+    "space/3",
+    "space/4",
+    "radius/full",
+    "border/width/default",
+    "typography/h3",
+    "typography/labelSmall",
+    "typography/bodySmall",
+    "layout/screen/paddingX"
+  ],
+  "accessibility": {
+    "role": "section",
+    "keyboardSupport": "Filter uses radiogroup semantics; carousel track is keyboard scrollable.",
+    "screenReader": "Section may be labelled by the optional title; empty state uses role=status.",
+    "focusManagement": "Filter chips are individual radio buttons; one selection at a time for the default module.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "content_id",
+      "content_title",
+      "content_description",
+      "content_category",
+      "content_image",
+      "content_url",
+      "content_duration",
+      "filter_selected",
+      "filter_options",
+      "visibility_condition"
+    ]
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["content", "carousel", "filters", "news", "discovery"],
+    "context": "Compose from Card + CardCarousel; keep personalization and filtering in parent state or services."
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "component": {
+    "name": "Banner",
+    "category": "feedback",
+    "description": "Contextual surface for global state, warnings, promos, errors, or success without blocking the main flow. Informative by default; optional inline link, CTA, or dismiss.",
+    "type": "status"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Banner",
+    "referenceNode": "114:803",
+    "componentSet": "Banner"
+  },
+  "usage": {
+    "useCases": [
+      "screen-or-section-context",
+      "non-blocking-warning",
+      "promo-or-incentive",
+      "validation-summary-inline",
+      "positive-confirmation"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "Field-level validation message",
+        "reason": "Use helper text or inline error on the field.",
+        "alternative": "Input helper / error pattern"
+      },
+      {
+        "scenario": "Critical decision that needs focus",
+        "reason": "Banner competes with primary content.",
+        "alternative": "Modal or dedicated step"
+      },
+      {
+        "scenario": "Multiple stacked banners",
+        "reason": "Noise and unclear priority.",
+        "alternative": "Single highest-priority banner or action list"
+      }
+    ],
+    "contentRules": [
+      "Description stays to 1–2 lines when possible.",
+      "Optional title: 4–6 words max; bold when present.",
+      "Danger: single message block uses bold body weight and component danger text token (burgundy tone).",
+      "At most one primary action (CTA or inline link as secondary discovery)."
+    ],
+    "requiredProps": ["variant", "message_body"]
+  },
+  "composition": {
+    "nestedComponents": ["Button", "Typography"],
+    "rules": [
+      "Layout: optional leading emoji text property, center stack (title + description + inline link), trailing dismiss or CTA.",
+      "Emoji icon is a text layer exposed through component text properties (emojiInfo, emojiWarning, emojiPromo, emojiDanger, emojiSuccess) so instances can swap the emoji without changing structure.",
+      "Background and text colors come only from component/banner/{variant} tokens.",
+      "Banner copy uses complete Figma text style Musky/Typography/Body Small 600 plus fontWeight/semibold binding.",
+      "Promo: title token component/banner/promo/title; inline link uses promo link token with underline.",
+      "Success variant: align with semantic/status/success until dedicated component/banner/success tokens exist.",
+      "Dismiss uses IconButton with accessible name such as Cerrar."
+    ]
+  },
+  "variants": {
+    "variant": ["info", "warning", "promo", "danger", "success"],
+    "hasIcon": [true, false],
+    "hasTitle": [true, false],
+    "hasInlineLink": [true, false],
+    "hasCTA": [true, false],
+    "ctaType": ["none", "link", "button"],
+    "dismissible": [true, false],
+    "density": ["compact", "default"],
+    "textAlign": ["left", "center"],
+    "tone": ["soft", "strong"]
+  },
+  "layout": {
+    "zones": ["leading-icon", "content", "trailing-action"],
+    "behavior": "Horizontal auto-layout; trailing slot shows dismiss xor CTA when configured."
+  },
+  "tokens": [
+    "component/banner/info/bg",
+    "component/banner/info/text",
+    "component/banner/info/icon",
+    "component/banner/warning/bg",
+    "component/banner/warning/text",
+    "component/banner/warning/icon",
+    "component/banner/promo/bg",
+    "component/banner/promo/text",
+    "component/banner/promo/title",
+    "component/banner/promo/icon",
+    "component/banner/promo/link",
+    "component/banner/danger/bg",
+    "component/banner/danger/text",
+    "component/banner/danger/icon",
+    "semantic/status/success/bg",
+    "semantic/status/success/text",
+    "fontWeight/semibold",
+    "Musky/Typography/Body Small 600",
+    "Musky/Typography/Emoji Small",
+    "typography/body/md/fontSize",
+    "typography/body/md/lineHeight",
+    "typography/body/sm/fontSize",
+    "typography/label/md/fontWeight",
+    "space-2",
+    "space-3",
+    "space-4",
+    "radius-md"
+  ],
+  "accessibility": {
+    "role": "region",
+    "keyboardSupport": "Dismiss and CTA are focusable when present; inline link is a native link.",
+    "screenReader": "Name the region from message title or message_type; do not rely on color alone.",
+    "focusManagement": "Optional dismiss does not trap focus; banner is not a dialog.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "message_id",
+      "message_type",
+      "message_priority",
+      "message_title",
+      "message_body",
+      "message_icon",
+      "message_has_action",
+      "message_dismissible",
+      "visibility_condition",
+      "campaign_start_date",
+      "campaign_end_date",
+      "audience_segment",
+      "related_entity_type",
+      "related_entity_id",
+      "message_is_blocking",
+      "message_read_status",
+      "action_id",
+      "action_label",
+      "action_type",
+      "action_target",
+      "action_payload"
+    ]
+  },
+  "aiHints": {
+    "priority": "medium",
+    "keywords": ["banner", "alert", "inline", "promo", "warning", "status", "dismiss"],
+    "context": "Place above main content of a screen or section. Prefer one banner; reserve danger for errors or blockers."
+  }
+}

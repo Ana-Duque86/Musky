@@ -1,0 +1,90 @@
+@import "../../styles/tokens.css";
+
+.musky-banner {
+  align-items: flex-start;
+  border: 0;
+  border-radius: var(--component-banner-radius);
+  box-sizing: border-box;
+  display: flex;
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  gap: var(--component-banner-gap);
+  line-height: var(--typography-body-small-line-height);
+  max-width: 100%;
+  min-width: 0;
+  padding: var(--component-banner-padding-y) var(--component-banner-padding-x);
+  width: 100%;
+}
+
+.musky-banner--info {
+  background: var(--component-banner-info-bg);
+  color: var(--component-banner-info-text);
+}
+
+.musky-banner--warning {
+  background: var(--component-banner-warning-bg);
+  color: var(--component-banner-warning-text);
+}
+
+.musky-banner--promo {
+  background: var(--component-banner-promo-bg);
+  color: var(--component-banner-promo-text);
+}
+
+.musky-banner--danger {
+  background: var(--component-banner-danger-bg);
+  color: var(--component-banner-danger-text);
+}
+
+.musky-banner--success {
+  background: var(--component-banner-success-bg);
+  color: var(--component-banner-success-text);
+}
+
+.musky-banner__icon {
+  align-items: center;
+  color: currentColor;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 1.125rem;
+  font-weight: var(--typography-font-weight-semibold);
+  height: 20px;
+  justify-content: center;
+  line-height: 1;
+  width: 20px;
+}
+
+.musky-banner__content {
+  display: grid;
+  flex: 1 1 auto;
+  gap: var(--component-banner-content-gap);
+  min-width: 0;
+}
+
+.musky-banner__title {
+  color: currentColor;
+  font-weight: var(--typography-font-weight-semibold);
+}
+
+.musky-banner--promo .musky-banner__title {
+  color: var(--component-banner-promo-title);
+}
+
+.musky-banner__body {
+  color: currentColor;
+}
+
+.musky-banner__inline-link {
+  margin-left: var(--space-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.musky-banner--promo .musky-banner__inline-link {
+  color: var(--component-banner-promo-link);
+  font-weight: var(--typography-font-weight-semibold);
+}
+
+.musky-banner__actions {
+  flex: 0 0 auto;
+}

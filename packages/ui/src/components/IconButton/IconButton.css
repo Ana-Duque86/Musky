@@ -1,0 +1,67 @@
+@import "../../styles/tokens.css";
+
+.musky-icon-button {
+  align-items: center;
+  background: var(--component-icon-button-secondary-bg);
+  border: var(--component-icon-button-border-width) solid var(--component-icon-button-secondary-border);
+  border-radius: var(--radius-full);
+  box-sizing: border-box;
+  color: var(--component-icon-button-secondary-icon);
+  cursor: pointer;
+  display: inline-flex;
+  height: var(--component-icon-button-size-md);
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: var(--component-icon-button-size-md);
+}
+
+.musky-icon-button__icon {
+  align-items: center;
+  display: inline-flex;
+  font-size: var(--component-icon-button-icon-size-md);
+  height: var(--component-icon-button-icon-size-md);
+  justify-content: center;
+  line-height: 1;
+  width: var(--component-icon-button-icon-size-md);
+}
+
+.musky-icon-button--primary {
+  background: var(--component-icon-button-primary-bg);
+  border-color: var(--component-icon-button-primary-border);
+  color: var(--component-icon-button-primary-icon);
+}
+
+.musky-icon-button--secondary {
+  background: var(--component-icon-button-secondary-bg);
+  border-color: var(--component-icon-button-secondary-border);
+  color: var(--component-icon-button-secondary-icon);
+}
+
+.musky-icon-button--tertiary {
+  background: var(--component-icon-button-tertiary-bg);
+  border-color: var(--component-icon-button-tertiary-border);
+  color: var(--component-icon-button-tertiary-icon);
+}
+
+.musky-icon-button__icon svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.musky-icon-button:focus-visible {
+  outline: var(--semantic-focus-ring-width) solid var(--component-icon-button-focus-ring);
+  outline-offset: var(--component-icon-button-focus-ring-offset);
+}
+
+.musky-icon-button__badge {
+  background: var(--component-icon-button-badge-bg);
+  border: 1.5px solid var(--component-icon-button-badge-border);
+  border-radius: var(--radius-full);
+  height: var(--component-icon-button-badge-size);
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: var(--component-icon-button-badge-size);
+}

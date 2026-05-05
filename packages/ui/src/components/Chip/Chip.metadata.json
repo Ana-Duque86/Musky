@@ -1,0 +1,76 @@
+{
+  "component": {
+    "name": "Chip",
+    "category": "feedback",
+    "description": "Compact priority/status pill using component chip tokens aliasing semantic status colors (danger, warning, info, success). Independent from list rows; compose inside Action List Item, filters, or tables.",
+    "type": "display"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Action List",
+    "referenceNode": "117:789",
+    "componentSet": "Chip / Priority"
+  },
+  "usage": {
+    "useCases": [
+      "task-priority-label",
+      "status-badge-inline",
+      "filter-tag-with-semantic-tone"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "Replacing full-row background for urgency",
+        "reason": "Chip reinforces priority; entire row tint overloads hierarchy.",
+        "alternative": "Neutral row surface + Chip"
+      }
+    ],
+    "contentRules": [
+      "Keep label to one short word or two words max.",
+      "Default Action List labels: urgent=Requerido, high=Pendiente, normal=Próximo, low=Info.",
+      "Use component/chip/status tokens for bg and text; these alias semantic status color decisions."
+    ],
+    "requiredProps": ["priority"]
+  },
+  "variants": {
+    "priority": ["urgent", "high", "normal", "low"]
+  },
+  "tokens": [
+    "component/chip/base/paddingX",
+    "component/chip/base/paddingY",
+    "component/chip/base/radius",
+    "component/chip/status/danger/bg",
+    "component/chip/status/danger/text",
+    "component/chip/status/warning/bg",
+    "component/chip/status/warning/text",
+    "component/chip/status/info/bg",
+    "component/chip/status/info/text",
+    "component/chip/status/success/bg",
+    "component/chip/status/success/text",
+    "typography/label/sm-semibold/fontSize",
+    "fontWeight/semibold",
+    "Musky/Typography/Label Small"
+  ],
+  "composition": {
+    "nestedComponents": [],
+    "rules": [
+      "urgent maps to component/chip/status/danger; high to warning; normal to info; low to success.",
+      "Labels are content, not color names; Action List uses Requerido, Pendiente, Próximo, Info.",
+      "Padding and radius are bound to component/chip/base/* variables.",
+      "Typography: Label Small + typography/label/sm-semibold/fontSize + fontWeight/semibold binding."
+    ]
+  },
+  "accessibility": {
+    "role": "text or img when icon added later",
+    "keyboardSupport": "Not interactive by default; parent row handles focus.",
+    "screenReader": "Chip label should restate priority when color alone is insufficient.",
+    "wcag": "AA text on semantic status backgrounds"
+  },
+  "data": {
+    "fields": ["task_priority", "action_title"]
+  },
+  "aiHints": {
+    "priority": "medium",
+    "keywords": ["chip", "badge", "priority", "urgent", "status"],
+    "context": "Prefer composing Chip instances rather than drawing pill fills inside parent components."
+  }
+}

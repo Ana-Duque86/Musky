@@ -1,0 +1,213 @@
+generated: "2026-05-03T01:01:47.827970+00:00"
+components:
+  Typography.stories:
+    path: packages/ui/src/foundations/Typography.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "color-catalog-ui":
+    path: packages/ui/src/foundations/colors/color-catalog-ui.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "semantic-border-icon-focus.stories":
+    path: packages/ui/src/foundations/colors/semantic-border-icon-focus.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "primitives-social.stories":
+    path: packages/ui/src/foundations/colors/primitives-social.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "semantic-background.stories":
+    path: packages/ui/src/foundations/colors/semantic-background.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "semantic-rewards.stories":
+    path: packages/ui/src/foundations/colors/semantic-rewards.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  overview.stories:
+    path: packages/ui/src/foundations/colors/overview.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "semantic-text.stories":
+    path: packages/ui/src/foundations/colors/semantic-text.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "semantic-action.stories":
+    path: packages/ui/src/foundations/colors/semantic-action.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "semantic-status.stories":
+    path: packages/ui/src/foundations/colors/semantic-status.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "component-banner.stories":
+    path: packages/ui/src/foundations/colors/component-banner.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "primitives-status.stories":
+    path: packages/ui/src/foundations/colors/primitives-status.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "primitives-neutral.stories":
+    path: packages/ui/src/foundations/colors/primitives-neutral.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "component-button-system.stories":
+    path: packages/ui/src/foundations/colors/component-button-system.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  "primitives-brand.stories":
+    path: packages/ui/src/foundations/colors/primitives-brand.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Button.stories:
+    path: packages/ui/src/components/Button/Button.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Button:
+    path: packages/ui/src/components/Button/Button.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  SegmentedControl.stories:
+    path: packages/ui/src/components/SegmentedControl/SegmentedControl.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  SegmentedControl:
+    path: packages/ui/src/components/SegmentedControl/SegmentedControl.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Avatar:
+    path: packages/ui/src/components/Avatar/Avatar.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  IconButton.stories:
+    path: packages/ui/src/components/IconButton/IconButton.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  IconButton:
+    path: packages/ui/src/components/IconButton/IconButton.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Header:
+    path: packages/ui/src/components/Header/Header.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[1]: packages/ui/src/pages/Home/Home.tsx
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Header.stories:
+    path: packages/ui/src/components/Header/Header.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Home:
+    path: packages/ui/src/pages/Home/Home.tsx
+    type: ui
+    framework: react
+    uses[2]: Header,type HeaderProps
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+  Home.stories:
+    path: packages/ui/src/pages/Home/Home.stories.tsx
+    type: ui
+    framework: react
+    uses[0]:
+    usedBy[0]:
+    externalDependencies[0]:
+    utilityDependencies[0]:
+statistics:
+  totalComponents: 26
+  ui: 26

@@ -1,0 +1,88 @@
+{
+  "component": {
+    "name": "Button",
+    "category": "actions",
+    "description": "Generic action button for primary, secondary, tertiary, and link actions. Ghost is intentionally not part of the system.",
+    "type": "action"
+  },
+  "usage": {
+    "useCases": [
+      "submit-primary-action",
+      "continue-flow",
+      "secondary-action",
+      "low-emphasis-link-action"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "Implicit card navigation",
+        "reason": "Use a clickable card pattern instead of adding a redundant button."
+      },
+      {
+        "scenario": "More than one primary in the same decision area",
+        "reason": "Primary should identify the main action."
+      }
+    ],
+    "contentRules": [
+      "Use short action labels, ideally 1-3 words.",
+      "Prefer clear verbs such as Continuar, Añadir, Activar.",
+      "Avoid Click aquí."
+    ]
+  },
+  "variants": {
+    "variant": ["primary", "secondary", "tertiary", "link"],
+    "size": ["sm", "md", "lg"],
+    "state": ["default", "pressed", "disabled", "loading", "focus"],
+    "icon": ["none", "left", "right"],
+    "fullWidth": [true, false]
+  },
+  "tokens": [
+    "semantic/action/primary/bg",
+    "semantic/action/primary/text",
+    "semantic/action/secondary/bg",
+    "semantic/action/secondary/text",
+    "semantic/action/secondary/border",
+    "semantic/action/tertiary/bg",
+    "semantic/action/tertiary/text",
+    "semantic/action/tertiary/border",
+    "semantic/action/link/text",
+    "semantic/action/disabled/bg",
+    "semantic/action/disabled/text",
+    "typography/label/md/fontSize",
+    "typography/label/md/lineHeight",
+    "typography/label/md/fontWeight",
+    "typography/label/sm/fontSize",
+    "typography/label/sm/lineHeight",
+    "typography/body/md/fontSize",
+    "typography/body/md/lineHeight",
+    "component/button/primary/bg",
+    "component/button/primary/text",
+    "component/button/secondary/bg",
+    "component/button/secondary/text",
+    "component/button/secondary/border",
+    "component/button/tertiary/bg",
+    "component/button/tertiary/text",
+    "component/button/tertiary/border",
+    "component/button/link/text",
+    "component/button/disabled/bg",
+    "component/button/disabled/text",
+    "component/button/focus/ring"
+  ],
+  "accessibility": {
+    "role": "button",
+    "keyboardSupport": "Native button behavior: Enter and Space activate the action.",
+    "screenReader": "Label text is the accessible name. Loading state sets aria-busy and disables repeat activation.",
+    "focusManagement": "Use visible focus ring. Disabled buttons are removed from tab order by native disabled behavior.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "action_id",
+      "action_label",
+      "action_type",
+      "action_state",
+      "action_priority",
+      "action_target",
+      "action_payload"
+    ]
+  }
+}

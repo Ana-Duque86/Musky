@@ -1,0 +1,121 @@
+@import "../../styles/tokens.css";
+
+.musky-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  flex: 0 0 auto;
+  fill: none;
+}
+
+.musky-icon--sm {
+  height: var(--layout-icon-size-sm);
+  width: var(--layout-icon-size-sm);
+}
+
+.musky-icon--md {
+  height: var(--layout-icon-size-md);
+  width: var(--layout-icon-size-md);
+}
+
+.musky-icon--lg {
+  height: var(--layout-icon-size-lg);
+  width: var(--layout-icon-size-lg);
+}
+
+.musky-icon__fill-a {
+  fill: var(--semantic-icon-duo-a);
+}
+
+.musky-icon__fill-b {
+  fill: var(--semantic-icon-duo-b);
+}
+
+.musky-icon__fill-badge {
+  fill: var(--semantic-icon-duo-badge);
+}
+
+.musky-icon__stroke-a {
+  stroke: var(--semantic-icon-duo-a);
+}
+
+.musky-icon__stroke-b {
+  stroke: var(--semantic-icon-duo-b);
+}
+
+.musky-icon__fill-b.musky-icon__stroke-a {
+  fill: var(--semantic-icon-duo-b);
+  stroke: var(--semantic-icon-duo-a);
+}
+
+.musky-icon--tone-primary {
+  --semantic-icon-duo-a: var(--color-brand-green-accent-deep);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--color-brand-pink);
+}
+
+.musky-icon--tone-secondary {
+  --semantic-icon-duo-a: var(--semantic-icon-secondary);
+  --semantic-icon-duo-b: var(--semantic-icon-muted);
+  --semantic-icon-duo-badge: var(--semantic-icon-muted);
+}
+
+.musky-icon--tone-muted {
+  --semantic-icon-duo-a: var(--semantic-icon-muted);
+  --semantic-icon-duo-b: var(--semantic-border-subtle);
+  --semantic-icon-duo-badge: var(--semantic-border-subtle);
+}
+
+.musky-icon--tone-inverse {
+  --semantic-icon-duo-a: var(--semantic-icon-inverse);
+  --semantic-icon-duo-b: var(--semantic-background-surface-alt);
+  --semantic-icon-duo-badge: var(--semantic-icon-inverse);
+}
+
+.musky-icon--tone-brand {
+  --semantic-icon-duo-a: var(--semantic-icon-brand);
+  --semantic-icon-duo-b: var(--semantic-icon-muted);
+  --semantic-icon-duo-badge: var(--color-brand-pink);
+}
+
+/** Marca: fill-a = vino (masa principal), fill-b = rosa (acentos / lazo). */
+.musky-icon--tone-brandPink {
+  --semantic-icon-duo-a: var(--color-brand-wine);
+  --semantic-icon-duo-b: var(--color-brand-pink);
+  --semantic-icon-duo-badge: var(--color-brand-pink);
+}
+
+.musky-icon--tone-accent {
+  --semantic-icon-duo-a: var(--semantic-icon-accent);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--color-brand-pink);
+}
+
+.musky-icon--tone-success {
+  --semantic-icon-duo-a: var(--semantic-status-success-icon);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--semantic-status-success-icon);
+}
+
+.musky-icon--tone-warning {
+  --semantic-icon-duo-a: var(--semantic-status-warning-icon);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--semantic-status-warning-icon);
+}
+
+.musky-icon--tone-danger {
+  --semantic-icon-duo-a: var(--semantic-status-danger-icon);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--semantic-status-danger-icon);
+}
+
+.musky-icon--tone-info {
+  --semantic-icon-duo-a: var(--semantic-status-info-icon);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--semantic-status-info-icon);
+}
+
+.musky-icon--tone-promo {
+  --semantic-icon-duo-a: var(--semantic-status-promo-icon);
+  --semantic-icon-duo-b: var(--color-brand-green-promo-lime);
+  --semantic-icon-duo-badge: var(--color-brand-pink);
+}

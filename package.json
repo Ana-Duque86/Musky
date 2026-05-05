@@ -1,0 +1,33 @@
+{
+  "name": "musky-design-system",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build -w @musky/ui",
+    "typecheck": "npm run typecheck -w @musky/ui",
+    "storybook": "storybook dev -p 6006 --ci -c apps/docs/.storybook",
+    "build:docs": "storybook build -c apps/docs/.storybook -o apps/docs/storybook-static",
+    "deploy:storybook": "npm run build:docs && vercel deploy apps/docs/storybook-static --yes --scope ana-duques-projects",
+    "ai:index": "python3 tools/skills/codebase-index/scripts/index_codebase.py . --format toon",
+    "ds:health": "node tools/ds-health/index.mjs"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "latest",
+    "@storybook/react-vite": "latest",
+    "@types/node": "latest",
+    "storybook": "latest",
+    "vercel": "^41.0.0"
+  }
+}

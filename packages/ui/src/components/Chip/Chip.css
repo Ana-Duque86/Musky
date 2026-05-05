@@ -1,0 +1,34 @@
+@import "../../styles/tokens.css";
+
+.musky-chip {
+  align-items: center;
+  border-radius: var(--component-chip-base-radius);
+  display: inline-flex;
+  font-family: var(--typography-label-small-font-family);
+  font-size: var(--component-chip-base-font-size);
+  font-weight: var(--typography-font-weight-semibold);
+  line-height: var(--component-chip-base-line-height);
+  padding: var(--component-chip-base-padding-y) var(--component-chip-base-padding-x);
+  width: fit-content;
+}
+
+.musky-chip--urgent,
+.musky-chip--blocked {
+  background: var(--component-chip-status-danger-bg);
+  color: var(--component-chip-status-danger-text);
+}
+
+.musky-chip--high {
+  background: var(--component-chip-status-warning-bg);
+  color: var(--component-chip-status-warning-text);
+}
+
+.musky-chip--normal {
+  background: var(--component-chip-status-info-bg);
+  color: var(--component-chip-status-info-text);
+}
+
+.musky-chip--low {
+  background: var(--component-chip-status-success-bg);
+  color: var(--component-chip-status-success-text);
+}

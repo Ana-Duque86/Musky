@@ -1,0 +1,165 @@
+{
+  "component": {
+    "name": "DoubleRewardCard",
+    "category": "rewards",
+    "description": "Creative composite reward card that combines accumulated reward value with referral activation through a brand-green promo panel, gift icon, visible code, and share/copy action.",
+    "type": "composite-card"
+  },
+  "figma": {
+    "file": "https://www.figma.com/design/q9gY8GgGHuGhrQ4iZ7Uo1e/Components",
+    "page": "Rewards",
+    "referenceNode": "122:952",
+    "componentSet": "Double Reward Card"
+  },
+  "usage": {
+    "useCases": [
+      "reward-balance-summary",
+      "referral-code-activation",
+      "invite-loop",
+      "reward-breakdown"
+    ],
+    "antiPatterns": [
+      {
+        "scenario": "A single static metric with no referral action",
+        "reason": "The component is designed as a behavior loop, not a simple stat card.",
+        "alternative": "Simple Card or metric tile"
+      },
+      {
+        "scenario": "Multiple competing CTAs",
+        "reason": "The activation subcard must keep one clear action.",
+        "alternative": "Choose copy or share as the primary action"
+      }
+    ],
+    "contentRules": [
+      "Use positive value framing such as 'Ya tienes 25€ acumulados'.",
+      "Show breakdown only when multiple rewards need explanation.",
+      "Keep referral code visible when active.",
+      "Current product design uses code + copy/share icon, not a text CTA.",
+      "The activation panel should feel promotional: brand greens, gift icon, and high-contrast referral code."
+    ],
+    "requiredProps": ["rewards_total", "referral_code", "referral_status"]
+  },
+  "composition": {
+    "nestedComponents": ["Typography", "IconButton"],
+    "rules": [
+      "The component is a stack of two subcards: Balance and Code.",
+      "In Figma, each variant must use a vertical Auto Layout root with Balance section and Referral promo panel as direct children.",
+      "Referral promo panel padding: vertical `layout/container/insetDense` (10px); horizontal matches balance subcard (`component/doubleRewardCard/balance/paddingX`).",
+      "Referral promo row: `spacing/4` (16px) horizontal gap between the gift column and promo copy (`component/doubleRewardCard/promoPanel/rowGap` on `musky-double-reward-card__promo` flex gap).",
+      "Referral promo panel uses Auto Layout for content and only decorative background shapes may be absolute-positioned.",
+      "Referral code pill must be a horizontal Auto Layout container with code text and copy/share icon.",
+      "When a visual value is not part of the global scale, bind it to component/doubleRewardCard/* instead of changing the design.",
+      "Compact mobile sizing must be controlled through component/doubleRewardCard/* tokens for balance padding, gift column width and icon sizing, code pill sizing, and title/subtitle gaps. The promo panel height follows content (no fixed min-height in layout).",
+      "Balance label ('Recompensas acumuladas') uses the same typography tokens as Action List row titles (`typography/body` + semibold); reward breakdown lines match Action List descriptions (`typography/bodySmall`).",
+      "Balance subcard is informational and not clickable.",
+      "Code subcard contains the single activation action: copy/share.",
+      "Use semantic surface/border and base radius for the outer card, brand green variables for the promo panel, and semantic/rewards/highlight/* for reward icon emphasis.",
+      "Do not move Header-specific accessibility documentation into this component; keep rewards reading-order annotations scoped to DoubleRewardCard."
+    ]
+  },
+  "variants": {
+    "rewardState": ["empty", "single", "multiple"],
+    "hasBreakdown": [true, false],
+    "codeVisible": [true, false],
+    "ctaType": ["copy", "share", "invite"],
+    "emphasis": ["balance", "code"],
+    "density": ["compact", "default"],
+    "theme": ["light", "promo"],
+    "interaction": ["static", "interactive"]
+  },
+  "layout": {
+    "zones": ["balance-subcard", "breakdown-list", "code-subcard"],
+    "behavior": "Vertical stack. Balance is always visible; breakdown is conditional; code/share action is the activation area."
+  },
+  "tokens": [
+    "semantic/background/surface",
+    "semantic/border/subtle",
+    "radius/md",
+    "semantic/rewards/highlight/bg",
+    "semantic/rewards/highlight/border",
+    "semantic/rewards/highlight/icon",
+    "semantic/rewards/highlight/text",
+    "color/brand/green/accentDeep",
+    "color/brand/green/promoLime",
+    "color/brand/pink",
+    "color/brand/wine",
+    "color/spring green/17",
+    "color/spring green/40",
+    "component/doubleRewardCard/componentSet/radius",
+    "component/doubleRewardCard/balance/gap",
+    "component/doubleRewardCard/balance/headerGap",
+    "component/doubleRewardCard/balance/paddingX",
+    "component/doubleRewardCard/balance/paddingTop",
+    "component/doubleRewardCard/balance/paddingBottom",
+    "component/doubleRewardCard/promoPanel/radius",
+    "component/doubleRewardCard/promoPanel/paddingY",
+    "component/doubleRewardCard/promoPanel/paddingX",
+    "component/doubleRewardCard/promoPanel/paddingRight",
+    "component/doubleRewardCard/promoPanel/rowGap",
+    "component/doubleRewardCard/rewardBadge/size",
+    "component/doubleRewardCard/rewardBadge/radius",
+    "component/doubleRewardCard/gift/columnWidth",
+    "component/doubleRewardCard/gift/size",
+    "component/doubleRewardCard/gift/smallSize",
+    "component/doubleRewardCard/codePill/radius",
+    "component/doubleRewardCard/codePill/minHeight",
+    "component/doubleRewardCard/codePill/maxWidth",
+    "component/doubleRewardCard/codePill/paddingX",
+    "component/doubleRewardCard/codePill/paddingY",
+    "component/doubleRewardCard/codePill/gap",
+    "component/doubleRewardCard/referralStack/gap",
+    "component/doubleRewardCard/balance/paddingBottomMultiple",
+    "component/doubleRewardCard/gift/boxRadius",
+    "component/doubleRewardCard/gift/lidRadius",
+    "component/doubleRewardCard/gift/ribbonRadius",
+    "component/doubleRewardCard/gift/smallBoxRadius",
+    "component/doubleRewardCard/gift/smallLidRadius",
+    "component/doubleRewardCard/gift/smallRibbonRadius",
+    "component/doubleRewardCard/copyIcon/radius",
+    "component/doubleRewardCard/amountEmpty/fontSize",
+    "component/doubleRewardCard/amountEmpty/lineHeight",
+    "component/doubleRewardCard/promoTitle/fontSize",
+    "component/doubleRewardCard/promoTitle/lineHeight",
+    "component/doubleRewardCard/referralCode/lineHeight",
+    "semantic/text/primary",
+    "semantic/text/secondary",
+    "semantic/icon/primary",
+    "semantic/action/link/text",
+    "semantic/focus/ring",
+    "spacing/2",
+    "spacing/3",
+    "spacing/4",
+    "typography/body",
+    "typography/bodySmall"
+  ],
+  "accessibility": {
+    "role": "region",
+    "keyboardSupport": "Share/copy action is a single focusable button. Balance subcard is not interactive.",
+    "screenReader": "Announce reward balance, optional breakdown, referral code, and share/copy action label.",
+    "focusManagement": "Focus lands only on the activation action when interactive.",
+    "wcag": "AA"
+  },
+  "data": {
+    "fields": [
+      "reward_id",
+      "reward_amount",
+      "reward_currency",
+      "reward_status",
+      "reward_activation_date",
+      "rewards_total",
+      "rewards_count",
+      "referral_code",
+      "referral_status",
+      "referral_action_type",
+      "referral_target",
+      "reward_source",
+      "is_reward_available",
+      "campaign_id"
+    ]
+  },
+  "aiHints": {
+    "priority": "high",
+    "keywords": ["reward", "referral", "invite", "code", "balance", "share"],
+    "context": "Use when the UI must both show accumulated reward value and invite the user to generate more rewards."
+  }
+}
